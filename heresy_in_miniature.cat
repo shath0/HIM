@@ -35,15 +35,12 @@
   </categoryEntries>
 
   <entryLinks>
-    <!-- Faction selection entry links -->
-    <entryLink id="el-fac-la-loy" name="Legiones Astartes — Loyalist" targetId="se-fac-la-loyalist" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-fac-la-tra" name="Legiones Astartes — Traitor" targetId="se-fac-la-traitor" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-fac-sa" name="Solar Auxilia" targetId="se-fac-sa" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-fac-tm" name="Mechanicum Taghmata" targetId="se-fac-tm" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-fac-mil" name="Militia &amp; Cults" targetId="se-fac-mil" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-fac-talons" name="Talons of the Emperor" targetId="se-fac-talons" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-fac-knights" name="Questoris Household" targetId="se-fac-knights" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-fac-daemons" name="Daemonic Host" targetId="se-fac-daemons" type="selectionEntry" hidden="false"/>
+    <!-- Detachment type entry links -->
+    <entryLink id="el-det-crusade" name="◆ Crusade Detachment" targetId="se-det-crusade" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-det-garrison" name="◆ Garrison Detachment" targetId="se-det-garrison" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-det-spearhead" name="◆ Spearhead Detachment" targetId="se-det-spearhead" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-det-recon" name="◆ Recon Detachment" targetId="se-det-recon" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-det-open" name="◆ Open Detachment" targetId="se-det-open" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-cmd" name="Legion Command" targetId="se-la-cmd" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-praetor" name="Legion Praetor" targetId="se-la-praetor" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-chaplain" name="Legion Chaplain" targetId="se-la-chaplain" type="selectionEntry" hidden="false"/>
@@ -6337,117 +6334,47 @@
       </infoGroup></infoGroups>
     </selectionEntry>
   
-    <selectionEntry id="se-fac-la-loyalist" name="Legiones Astartes — Loyalist" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-la-loy" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-la-loy-align" targetId="cat-loyalist-sub" primary="false"/>
-      </categoryLinks>
+  
+    <!-- ══════════════════════════════════════════════════════════════════
+         DETACHMENT TYPE SELECTIONS
+         Pick exactly one per force. The chosen detachment determines slot
+         caps (per the rulebook); the BattleScribe data sets generous caps
+         that cover all detachments, so the player self-polices per Section 4.
+    ═══════════════════════════════════════════════════════════════════════ -->
+    <selectionEntry id="se-det-crusade" name="◆ Crusade Detachment (Standard)" hidden="false" collective="false" type="upgrade">
+      <categoryLinks><categoryLink id="cl-det-crusade" targetId="cat-detachment" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-la-loy" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-la-loy-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
+      <infoGroups><infoGroup id="ig-det-crusade" name="Crusade Detachment">
+        <infoLinks><infoLink id="il-det-crusade" name="Slot caps" targetId="note-det-crusade" type="rule"/></infoLinks>
+      </infoGroup></infoGroups>
     </selectionEntry>
-    <selectionEntry id="se-fac-la-traitor" name="Legiones Astartes — Traitor" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-la-tra" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-la-tra-align" targetId="cat-traitor-sub" primary="false"/>
-      </categoryLinks>
+    <selectionEntry id="se-det-garrison" name="◆ Garrison Detachment (Defensive)" hidden="false" collective="false" type="upgrade">
+      <categoryLinks><categoryLink id="cl-det-garrison" targetId="cat-detachment" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-la-tra" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-la-tra-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
+      <infoGroups><infoGroup id="ig-det-garrison" name="Garrison Detachment">
+        <infoLinks><infoLink id="il-det-garrison" name="Slot caps" targetId="note-det-garrison" type="rule"/></infoLinks>
+      </infoGroup></infoGroups>
     </selectionEntry>
-    <selectionEntry id="se-fac-sa" name="Solar Auxilia" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-sa" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-sa-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
+    <selectionEntry id="se-det-spearhead" name="◆ Spearhead Detachment (Armoured)" hidden="false" collective="false" type="upgrade">
+      <categoryLinks><categoryLink id="cl-det-spearhead" targetId="cat-detachment" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-sa" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-sa-1" name="Discipline of the Tercio. +1 Reaction per 2 Troops (max +2)." targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
+      <infoGroups><infoGroup id="ig-det-spearhead" name="Spearhead Detachment">
+        <infoLinks><infoLink id="il-det-spearhead" name="Slot caps" targetId="note-det-spearhead" type="rule"/></infoLinks>
+      </infoGroup></infoGroups>
     </selectionEntry>
-    <selectionEntry id="se-fac-tm" name="Mechanicum Taghmata" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-tm" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-tm-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
+    <selectionEntry id="se-det-recon" name="◆ Recon Detachment (Skirmish)" hidden="false" collective="false" type="upgrade">
+      <categoryLinks><categoryLink id="cl-det-recon" targetId="cat-detachment" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-tm" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-tm-1" name="Cortex Network. Automata require Controller." targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
+      <infoGroups><infoGroup id="ig-det-recon" name="Recon Detachment">
+        <infoLinks><infoLink id="il-det-recon" name="Slot caps" targetId="note-det-recon" type="rule"/></infoLinks>
+      </infoGroup></infoGroups>
     </selectionEntry>
-    <selectionEntry id="se-fac-mil" name="Militia &amp; Cults" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-mil" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-mil-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
+    <selectionEntry id="se-det-open" name="◆ Open Detachment (Narrative)" hidden="false" collective="false" type="upgrade">
+      <categoryLinks><categoryLink id="cl-det-open" targetId="cat-detachment" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-mil" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-mil-1" name="Strength in Numbers. Expendable. Mortal (max Sv 4+)." targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-talons" name="Talons of the Emperor" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-talons" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-talons-align" targetId="cat-loyalist-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-talons" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-talons-1" name="Null Aegis when Custodes + Sisters within 3&quot;." targetId="rule-null-aegis" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-knights" name="Questoris Household" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-knights" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-knights-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-knights" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-knights-1" name="Knight Household rules apply. Seneschal required as HQ." targetId="rule-commander" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-daemons" name="Daemonic Host" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-daemons" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-daemons-align" targetId="cat-traitor-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-daemons" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-daemons-1" name="Daemon special rules apply. Instability at end of round." targetId="rule-daemon" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
+      <infoGroups><infoGroup id="ig-det-open" name="Open Detachment">
+        <infoLinks><infoLink id="il-det-open" name="Slot caps" targetId="note-det-open" type="rule"/></infoLinks>
+      </infoGroup></infoGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
@@ -7171,13 +7098,13 @@
     <rule id="note-boon-tc-favour" name="Campaign Boon: Warmaster&#x27;s Favour" hidden="false"><description>1/campaign: all units +1 Hit Round 1. Earned: win by 5+ VP margin.</description></rule>
     <rule id="note-boon-tc-tide" name="Campaign Boon: Corruption Tide" hidden="false"><description>Round 3 every game: 1 free Lesser Daemon Pack from board edge. Earned: win 3+ games with Summoning.</description></rule>
     <rule id="note-boon-tc-longwar" name="Campaign Boon: The Long War Begins" hidden="false"><description>All units +1 Ld. Earned: complete entire campaign book.</description></rule>
+    <rule id="note-det-crusade" name="Crusade Detachment" hidden="false"><description>Standard balanced detachment. Slot caps: HQ 1–2, Troops 2–6, Elites 0–3, Heavy Support 0–3, Fast Attack 0–2, Flyer 0–1, Lord of War 0–1 (max 25% of army points). 300–750 pts recommended.</description></rule>
+    <rule id="note-det-garrison" name="Garrison Detachment" hidden="false"><description>Siege defence and Zone Mortalis. Slot caps: HQ 1–2, Troops 3–8, Elites 0–2, Heavy Support 0–4, Fast Attack 0–1. No LoW or Flyers. Troops gain +1 Sv within 3" of objectives. Commander gets 1 free wall. 300–500 pts recommended.</description></rule>
+    <rule id="note-det-spearhead" name="Spearhead Detachment" hidden="false"><description>Vehicle-heavy thrust. Slot caps: HQ 1–2 (must be embarked or vehicle), Troops 1–3 (no foot infantry), Elites 0–2, Heavy Support 1–5, Fast Attack 0–3, Lord of War 0–1 (max 25%). All Vehicles +1 Mv Round 1. 500–750 pts recommended.</description></rule>
+    <rule id="note-det-recon" name="Recon Detachment" hidden="false"><description>Small-scale skirmish. Slot caps: HQ 1, Troops 1–4, Elites 0–2, Heavy Support 0–1, Fast Attack 0–3. No Flyers, no LoW. All units gain Scout. No unit may exceed 80 pts. 200–400 pts recommended.</description></rule>
+    <rule id="note-det-open" name="Open Detachment" hidden="false"><description>Narrative play. No slot maxes enforced. Use for campaigns, lopsided scenarios, or collection-based games. Minimum: 1 HQ + 1 Troops.</description></rule>
   </sharedRules>
 
-  <!-- ══════════════════════════════════════════════════════════════════
-       FACTION SELECTION ENTRIES
-       Pick exactly one Faction entry per roster. These live in the
-       cat-faction category so they always appear first in the UI.
-  ════════════════════════════════════════════════════════════════════ -->
   
 
 </catalogue>
