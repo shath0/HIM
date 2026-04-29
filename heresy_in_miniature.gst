@@ -29,33 +29,6 @@
     <categoryEntry id="cat-detachment" name="◆ Detachment Type" hidden="false"/>
 
     <!-- Faction marker categories (hidden, one per force, auto-included) -->
-    <categoryEntry id="cat-mark-al" name="Marker — al" hidden="true"/>
-    <categoryEntry id="cat-mark-auxilia" name="Marker — auxilia" hidden="true"/>
-    <categoryEntry id="cat-mark-ba" name="Marker — ba" hidden="true"/>
-    <categoryEntry id="cat-mark-da" name="Marker — da" hidden="true"/>
-    <categoryEntry id="cat-mark-daemons" name="Marker — daemons" hidden="true"/>
-    <categoryEntry id="cat-mark-dg" name="Marker — dg" hidden="true"/>
-    <categoryEntry id="cat-mark-ec" name="Marker — ec" hidden="true"/>
-    <categoryEntry id="cat-mark-if" name="Marker — if" hidden="true"/>
-    <categoryEntry id="cat-mark-ih" name="Marker — ih" hidden="true"/>
-    <categoryEntry id="cat-mark-iind" name="Marker — iind" hidden="true"/>
-    <categoryEntry id="cat-mark-iw" name="Marker — iw" hidden="true"/>
-    <categoryEntry id="cat-mark-knights" name="Marker — knights" hidden="true"/>
-    <categoryEntry id="cat-mark-mech" name="Marker — mech" hidden="true"/>
-    <categoryEntry id="cat-mark-militia" name="Marker — militia" hidden="true"/>
-    <categoryEntry id="cat-mark-nl" name="Marker — nl" hidden="true"/>
-    <categoryEntry id="cat-mark-open" name="Marker — open" hidden="true"/>
-    <categoryEntry id="cat-mark-rg" name="Marker — rg" hidden="true"/>
-    <categoryEntry id="cat-mark-sal" name="Marker — sal" hidden="true"/>
-    <categoryEntry id="cat-mark-soh" name="Marker — soh" hidden="true"/>
-    <categoryEntry id="cat-mark-sw" name="Marker — sw" hidden="true"/>
-    <categoryEntry id="cat-mark-talons" name="Marker — talons" hidden="true"/>
-    <categoryEntry id="cat-mark-ts" name="Marker — ts" hidden="true"/>
-    <categoryEntry id="cat-mark-um" name="Marker — um" hidden="true"/>
-    <categoryEntry id="cat-mark-wb" name="Marker — wb" hidden="true"/>
-    <categoryEntry id="cat-mark-we" name="Marker — we" hidden="true"/>
-    <categoryEntry id="cat-mark-ws" name="Marker — ws" hidden="true"/>
-    <categoryEntry id="cat-mark-xith" name="Marker — xith" hidden="true"/>
 
     <!-- Legacy alignment markers (referenced by catalogue rules) -->
     <categoryEntry id="cat-loyalist-sub" name="Loyalist Subfaction" hidden="true"/>
@@ -68,14 +41,7 @@
 
   <forceEntries>
     <forceEntry id="force-leg-da" name="I — Dark Angels" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-da-mark" name="Faction Marker" targetId="cat-mark-da" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-da-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-da-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-da-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-da-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-da-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-da-det" type="max"/>
@@ -341,14 +307,7 @@
       <categoryLink id="cl-force-leg-da-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-iind" name="II — [REDACTED]" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-iind-mark" name="Faction Marker" targetId="cat-mark-iind" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-iind-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-iind-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-iind-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-iind-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-iind-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-iind-det" type="max"/>
@@ -616,14 +575,7 @@
       <categoryLink id="cl-force-leg-iind-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-ec" name="III — Emperor’s Children" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-ec-mark" name="Faction Marker" targetId="cat-mark-ec" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ec-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ec-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-ec-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-ec-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ec-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ec-det" type="max"/>
@@ -889,14 +841,7 @@
       <categoryLink id="cl-force-leg-ec-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-iw" name="IV — Iron Warriors" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-iw-mark" name="Faction Marker" targetId="cat-mark-iw" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-iw-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-iw-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-iw-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-iw-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-iw-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-iw-det" type="max"/>
@@ -1162,14 +1107,7 @@
       <categoryLink id="cl-force-leg-iw-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-ws" name="V — White Scars" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-ws-mark" name="Faction Marker" targetId="cat-mark-ws" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ws-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ws-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-ws-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-ws-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ws-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ws-det" type="max"/>
@@ -1435,14 +1373,7 @@
       <categoryLink id="cl-force-leg-ws-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-sw" name="VI — Space Wolves" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-sw-mark" name="Faction Marker" targetId="cat-mark-sw" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-sw-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-sw-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-sw-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-sw-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-sw-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-sw-det" type="max"/>
@@ -1708,14 +1639,7 @@
       <categoryLink id="cl-force-leg-sw-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-if" name="VII — Imperial Fists" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-if-mark" name="Faction Marker" targetId="cat-mark-if" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-if-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-if-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-if-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-if-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-if-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-if-det" type="max"/>
@@ -1981,14 +1905,7 @@
       <categoryLink id="cl-force-leg-if-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-nl" name="VIII — Night Lords" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-nl-mark" name="Faction Marker" targetId="cat-mark-nl" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-nl-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-nl-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-nl-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-nl-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-nl-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-nl-det" type="max"/>
@@ -2254,14 +2171,7 @@
       <categoryLink id="cl-force-leg-nl-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-ba" name="IX — Blood Angels" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-ba-mark" name="Faction Marker" targetId="cat-mark-ba" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ba-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ba-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-ba-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-ba-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ba-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ba-det" type="max"/>
@@ -2527,14 +2437,7 @@
       <categoryLink id="cl-force-leg-ba-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-ih" name="X — Iron Hands" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-ih-mark" name="Faction Marker" targetId="cat-mark-ih" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ih-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ih-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-ih-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-ih-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ih-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ih-det" type="max"/>
@@ -2800,14 +2703,7 @@
       <categoryLink id="cl-force-leg-ih-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-xith" name="XI — [REDACTED]" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-xith-mark" name="Faction Marker" targetId="cat-mark-xith" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-xith-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-xith-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-xith-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-xith-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-xith-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-xith-det" type="max"/>
@@ -3075,14 +2971,7 @@
       <categoryLink id="cl-force-leg-xith-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-we" name="XII — World Eaters" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-we-mark" name="Faction Marker" targetId="cat-mark-we" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-we-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-we-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-we-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-we-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-we-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-we-det" type="max"/>
@@ -3348,14 +3237,7 @@
       <categoryLink id="cl-force-leg-we-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-um" name="XIII — Ultramarines" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-um-mark" name="Faction Marker" targetId="cat-mark-um" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-um-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-um-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-um-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-um-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-um-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-um-det" type="max"/>
@@ -3621,14 +3503,7 @@
       <categoryLink id="cl-force-leg-um-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-dg" name="XIV — Death Guard" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-dg-mark" name="Faction Marker" targetId="cat-mark-dg" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-dg-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-dg-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-dg-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-dg-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-dg-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-dg-det" type="max"/>
@@ -3894,14 +3769,7 @@
       <categoryLink id="cl-force-leg-dg-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-ts" name="XV — Thousand Sons" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-ts-mark" name="Faction Marker" targetId="cat-mark-ts" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ts-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ts-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-ts-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-ts-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-ts-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-ts-det" type="max"/>
@@ -4167,14 +4035,7 @@
       <categoryLink id="cl-force-leg-ts-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-soh" name="XVI — Sons of Horus" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-soh-mark" name="Faction Marker" targetId="cat-mark-soh" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-soh-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-soh-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-soh-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-soh-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-soh-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-soh-det" type="max"/>
@@ -4440,14 +4301,7 @@
       <categoryLink id="cl-force-leg-soh-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-wb" name="XVII — Word Bearers" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-wb-mark" name="Faction Marker" targetId="cat-mark-wb" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-wb-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-wb-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-wb-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-wb-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-wb-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-wb-det" type="max"/>
@@ -4713,14 +4567,7 @@
       <categoryLink id="cl-force-leg-wb-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-sal" name="XVIII — Salamanders" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-sal-mark" name="Faction Marker" targetId="cat-mark-sal" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-sal-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-sal-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-sal-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-sal-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-sal-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-sal-det" type="max"/>
@@ -4986,14 +4833,7 @@
       <categoryLink id="cl-force-leg-sal-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-rg" name="XIX — Raven Guard" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-rg-mark" name="Faction Marker" targetId="cat-mark-rg" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-rg-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-rg-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-rg-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-rg-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-rg-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-rg-det" type="max"/>
@@ -5259,14 +5099,7 @@
       <categoryLink id="cl-force-leg-rg-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-leg-al" name="XX — Alpha Legion" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-leg-al-mark" name="Faction Marker" targetId="cat-mark-al" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-al-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-al-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-leg-al-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-leg-al-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-leg-al-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-leg-al-det" type="max"/>
@@ -5532,14 +5365,7 @@
       <categoryLink id="cl-force-leg-al-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-auxilia" name="Solar Auxilia Tercio" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-auxilia-mark" name="Faction Marker" targetId="cat-mark-auxilia" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-auxilia-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-auxilia-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-auxilia-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-auxilia-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-auxilia-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-auxilia-det" type="max"/>
@@ -5807,14 +5633,7 @@
       <categoryLink id="cl-force-auxilia-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-mech" name="Mechanicum Taghmata" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-mech-mark" name="Faction Marker" targetId="cat-mark-mech" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-mech-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-mech-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-mech-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-mech-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-mech-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-mech-det" type="max"/>
@@ -6082,14 +5901,7 @@
       <categoryLink id="cl-force-mech-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-militia" name="Militia &amp; Cults" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-militia-mark" name="Faction Marker" targetId="cat-mark-militia" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-militia-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-militia-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-militia-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-militia-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-militia-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-militia-det" type="max"/>
@@ -6357,14 +6169,7 @@
       <categoryLink id="cl-force-militia-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-talons" name="Talons of the Emperor" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-talons-mark" name="Faction Marker" targetId="cat-mark-talons" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-talons-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-talons-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-talons-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-talons-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-talons-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-talons-det" type="max"/>
@@ -6630,14 +6435,7 @@
       <categoryLink id="cl-force-talons-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-knights" name="Questoris Household" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-knights-mark" name="Faction Marker" targetId="cat-mark-knights" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-knights-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-knights-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-knights-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-knights-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-knights-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-knights-det" type="max"/>
@@ -6905,14 +6703,7 @@
       <categoryLink id="cl-force-knights-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-daemons" name="Daemonic Host" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-daemons-mark" name="Faction Marker" targetId="cat-mark-daemons" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-daemons-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-daemons-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-daemons-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-daemons-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-daemons-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-daemons-det" type="max"/>
@@ -7178,14 +6969,7 @@
       <categoryLink id="cl-force-daemons-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-open" name="Open / Mixed (Narrative Play)" hidden="false"><categoryLinks>
-      <!-- Auto-included faction marker -->
-      <categoryLink id="cl-force-open-mark" name="Faction Marker" targetId="cat-mark-open" primary="true" hidden="true">
-        <constraints>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-open-mark" type="min"/>
-          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-open-mark" type="max"/>
-        </constraints>
-      </categoryLink>
-      <categoryLink id="cl-force-open-det" name="◆ Detachment Type" targetId="cat-detachment" primary="false">
+      <categoryLink id="cl-force-open-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-open-det" type="min"/>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-open-det" type="max"/>
