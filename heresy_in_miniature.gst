@@ -5916,7 +5916,27 @@
       <categoryLink id="cl-force-mech-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
       <categoryLink id="cl-force-mech-bt" name="★ Boon — Traitor" targetId="cat-boon-t-cond" primary="false"/>
       <categoryLink id="cl-force-mech-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
-    </categoryLinks></forceEntry>
+    </categoryLinks>        <entryLinks>
+          <entryLink id="el-tm-archmagos-abeyant-in-force-mech" name="Archmagos Prime on Abeyant" targetId="se-tm-archmagos-abeyant" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-techpriest-in-force-mech" name="Tech-Priest Auxilia" targetId="se-tm-techpriest" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-thrall-in-force-mech" name="Adsecularis Tech-Thrall Covenant" targetId="se-tm-thrall" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-secutor-in-force-mech" name="Myrmidon Secutor Covenant" targetId="se-tm-secutor" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-ursarax-in-force-mech" name="Ursarax Cohort" targetId="se-tm-ursarax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-scyllax-in-force-mech" name="Scyllax Guardian-Automata" targetId="se-tm-scyllax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-arlatax-in-force-mech" name="Arlatax Battle-Automata" targetId="se-tm-arlatax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-vultarax-in-force-mech" name="Vultarax Strato-Automata" targetId="se-tm-vultarax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-destructor-in-force-mech" name="Myrmidon Destructor Covenant" targetId="se-tm-destructor" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-krios-venator-in-force-mech" name="Krios Venator" targetId="se-tm-krios-venator" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-karacnos-in-force-mech" name="Karacnos Assault Tank" targetId="se-tm-karacnos" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-knight-magaera-in-force-mech" name="Knight Magaera" targetId="se-tm-knight-magaera" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-knight-styrix-in-force-mech" name="Knight Styrix" targetId="se-tm-knight-styrix" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-harpax-in-force-mech" name="Harpax Swarmer Scout Host" targetId="se-tm-harpax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-errax-in-force-mech" name="Errax Butcher Assault Stalker" targetId="se-tm-errax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-tenebrax-in-force-mech" name="Tenebrax Archer Battle Stalker" targetId="se-tm-tenebrax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-scintillax-in-force-mech" name="Scintillax Cyclops Noospheric Stalker" targetId="se-tm-scintillax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-serperos-in-force-mech" name="Serperos Overlord Heavy Stalker" targetId="se-tm-serperos" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+</forceEntry>
     <forceEntry id="force-militia" name="Militia &amp; Cults" hidden="false"><categoryLinks>
       <categoryLink id="cl-force-militia-cat-prov" name="◆ Provenance of War" targetId="cat-prov" primary="false">
         <constraints>
@@ -7276,7 +7296,27 @@
       <categoryLink id="cl-force-open-blc" name="★ Campaign Boon — Loyalist" targetId="cat-boon-l-camp" primary="false"/>
       <categoryLink id="cl-force-open-bt" name="★ Boon — Traitor" targetId="cat-boon-t-cond" primary="false"/>
       <categoryLink id="cl-force-open-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
-    </categoryLinks></forceEntry>
+    </categoryLinks>        <entryLinks>
+          <entryLink id="el-tm-archmagos-abeyant-in-force-open" name="Archmagos Prime on Abeyant" targetId="se-tm-archmagos-abeyant" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-techpriest-in-force-open" name="Tech-Priest Auxilia" targetId="se-tm-techpriest" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-thrall-in-force-open" name="Adsecularis Tech-Thrall Covenant" targetId="se-tm-thrall" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-secutor-in-force-open" name="Myrmidon Secutor Covenant" targetId="se-tm-secutor" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-ursarax-in-force-open" name="Ursarax Cohort" targetId="se-tm-ursarax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-scyllax-in-force-open" name="Scyllax Guardian-Automata" targetId="se-tm-scyllax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-arlatax-in-force-open" name="Arlatax Battle-Automata" targetId="se-tm-arlatax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-vultarax-in-force-open" name="Vultarax Strato-Automata" targetId="se-tm-vultarax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-destructor-in-force-open" name="Myrmidon Destructor Covenant" targetId="se-tm-destructor" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-krios-venator-in-force-open" name="Krios Venator" targetId="se-tm-krios-venator" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-karacnos-in-force-open" name="Karacnos Assault Tank" targetId="se-tm-karacnos" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-knight-magaera-in-force-open" name="Knight Magaera" targetId="se-tm-knight-magaera" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-knight-styrix-in-force-open" name="Knight Styrix" targetId="se-tm-knight-styrix" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-harpax-in-force-open" name="Harpax Swarmer Scout Host" targetId="se-tm-harpax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-errax-in-force-open" name="Errax Butcher Assault Stalker" targetId="se-tm-errax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-tenebrax-in-force-open" name="Tenebrax Archer Battle Stalker" targetId="se-tm-tenebrax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-scintillax-in-force-open" name="Scintillax Cyclops Noospheric Stalker" targetId="se-tm-scintillax" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-tm-serperos-in-force-open" name="Serperos Overlord Heavy Stalker" targetId="se-tm-serperos" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+</forceEntry>
   </forceEntries>
 
   <sharedRules>
