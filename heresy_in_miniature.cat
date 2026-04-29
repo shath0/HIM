@@ -295,6 +295,611 @@
     <entryLink id="el-boon-tc-longwar" name="Campaign Boon: The Long War Begins" targetId="se-boon-tc-longwar" type="selectionEntry" hidden="false"/>
   </entryLinks>
   <sharedSelectionEntries>
+    <!-- ══ SHARED WARGEAR OPTIONS (Astartes) ════════════════════ -->
+    <selectionEntry id="se-opt-bolters" name="Bolters (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-bolters" name="Bolters" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-plasma" name="Plasma Guns (2 models swap)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-plasma" name="Plasma Guns" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Gets Hot, Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-melta" name="Melta Guns (2 models swap)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-melta" name="Melta Guns" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-volkite" name="Volkite Chargers (2 models swap)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-volkite" name="Volkite Chargers" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Deflagrate, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-flamer" name="Flamers (2 models swap)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-flamer" name="Flamers" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">2"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Template, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-rotor" name="Rotor Cannon (Recon only)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-rotor" name="Rotor Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rending</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hvy-bolters" name="Heavy Bolters (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-hvy-bolters" name="Heavy Bolters" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">7"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hvy-lascannon" name="Lascannons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="15"/></costs>
+      <profiles>
+        <profile id="p-opt-hvy-lascannon" name="Lascannons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">9"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hvy-missile" name="Missile Launchers (Krak)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-hvy-missile" name="Missile Launchers" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hvy-multi" name="Multi-Meltas" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-hvy-multi" name="Multi-Meltas" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hvy-plasma" name="Plasma Cannons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-hvy-plasma" name="Plasma Cannons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Gets Hot, Blast, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hvy-volkite" name="Volkite Culverins" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-hvy-volkite" name="Volkite Culverins" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Deflagrate, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hvy-autocannon" name="Autocannons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-hvy-autocannon" name="Autocannons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-sgt-chainsword" name="Sgt: Chainsword (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-sgt-chainsword" name="Sgt: Chainsword" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">+1 Atk</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-sgt-power" name="Sgt: Power Weapon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-sgt-power" name="Sgt: Power Weapon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-sgt-fist" name="Sgt: Power Fist" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-sgt-fist" name="Sgt: Power Fist" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-term-fist" name="Power Fists (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-term-fist" name="Power Fists" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-term-chainfist" name="Chainfists" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-term-chainfist" name="Chainfists" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Sunder, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-term-claws" name="Lightning Claws" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-term-claws" name="Lightning Claws" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Shred, Rending</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-term-thunder" name="Thunder Hammers" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-term-thunder" name="Thunder Hammers" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Concussive, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-dread-cml" name="Cyclone Missile Launcher" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="15"/></costs>
+      <profiles>
+        <profile id="p-opt-dread-cml" name="Cyclone Missile Launcher" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-dread-multi" name="Multi-Melta" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-dread-multi" name="Multi-Melta" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-dread-twinlas" name="Twin Lascannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="20"/></costs>
+      <profiles>
+        <profile id="p-opt-dread-twinlas" name="Twin Lascannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">9"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-dread-assault" name="Assault Cannon (default Contemptor)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-dread-assault" name="Assault Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-dread-fist" name="Power Fist (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-dread-fist" name="Power Fist" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-dread-claw" name="Siege Drill" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-dread-claw" name="Siege Drill" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Sunder, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-dread-storm" name="Storm Cannon Array" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-dread-storm" name="Storm Cannon Array" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-pred-autocannon" name="Autocannon Turret (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-pred-autocannon" name="Autocannon Turret" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-pred-laser" name="Predator Lascannon Turret" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="15"/></costs>
+      <profiles>
+        <profile id="p-opt-pred-laser" name="Predator Lascannon Turret" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">9"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-pred-magna" name="Magna-Melta Turret" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-pred-magna" name="Magna-Melta Turret" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-sp-none" name="No Sponsons (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+    <selectionEntry id="se-opt-sp-hvybolter" name="Heavy Bolter Sponsons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-sp-hvybolter" name="Heavy Bolter Sponsons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">7"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-sp-lascannon" name="Lascannon Sponsons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="20"/></costs>
+      <profiles>
+        <profile id="p-opt-sp-lascannon" name="Lascannon Sponsons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">9"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-sp-flamer" name="Heavy Flamer Sponsons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-sp-flamer" name="Heavy Flamer Sponsons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Template, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-pintle-none" name="No Pintle (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+    <selectionEntry id="se-opt-pintle-bolter" name="Pintle Storm Bolter" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-pintle-bolter" name="Pintle Storm Bolter" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rapid Fire, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-pintle-multi" name="Pintle Multi-Melta" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-pintle-multi" name="Pintle Multi-Melta" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-pintle-havoc" name="Havoc Launcher" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-pintle-havoc" name="Havoc Launcher" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Blast, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-bp" name="Bolt Pistol (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-bp" name="Bolt Pistol" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-plasma-pist" name="Plasma Pistol" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-plasma-pist" name="Plasma Pistol" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Gets Hot, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-melta-pist" name="Inferno Pistol" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-melta-pist" name="Inferno Pistol" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">2"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-volk-pist" name="Volkite Serpenta" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-volk-pist" name="Volkite Serpenta" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Deflagrate, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-combi" name="Combi-Bolter" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-combi" name="Combi-Bolter" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-power" name="Power Sword (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-power" name="Power Sword" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-thunder" name="Thunder Hammer" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-thunder" name="Thunder Hammer" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Concussive, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-paragon" name="Paragon Blade" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="15"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-paragon" name="Paragon Blade" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Master-crafted, Rending</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-hq-fist" name="Power Fist" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-hq-fist" name="Power Fist" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-fly-stock" name="Standard Loadout (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+    <selectionEntry id="se-opt-fly-las" name="Wing Lascannons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="15"/></costs>
+      <profiles>
+        <profile id="p-opt-fly-las" name="Wing Lascannons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">9"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-fly-missile" name="Hellstrike Missiles" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-fly-missile" name="Hellstrike Missiles" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">10"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-fellblade-hvy" name="Fellblade — Accelerator Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-fellblade-hvy" name="Fellblade — Accelerator Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">12"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Blast, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-fellblade-laser" name="Fellblade — Laser Destroyer Variant" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-fellblade-laser" name="Fellblade — Laser Destroyer Variant" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">10"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-glaive-volk" name="Glaive — Volkite Carronade (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-glaive-volk" name="Glaive — Volkite Carronade" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">10"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Deflagrate, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-typhon-cannon" name="Typhon — Dreadhammer Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-typhon-cannon" name="Typhon — Dreadhammer Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Blast, Heavy, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-cerberus-neutron" name="Cerberus — Neutron Laser (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-cerberus-neutron" name="Cerberus — Neutron Laser" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">12"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-falchion-vol" name="Falchion — Volcano Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-falchion-vol" name="Falchion — Volcano Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">14"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-5</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry id="se-opt-mastodon-skyreaper" name="Mastodon — Skyreaper Battery (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-mastodon-skyreaper" name="Mastodon — Skyreaper Battery" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Blast, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+    <!-- ══ END SHARED WARGEAR OPTIONS ═══════════════════════════ -->
 
     <selectionEntry id="se-la-cmd" name="Legion Command" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-cmd" targetId="cat-hq" primary="true"/></categoryLinks>
@@ -324,6 +929,33 @@
       <infoGroups><infoGroup id="ig-la-cmd" name="Rules"><infoLinks>
         <infoLink id="il-la-cmd-0" name="Commander" targetId="note-la-cmd-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-cmd-hq-sidearm" name="Sidearm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hq-bp">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-cmd-hq-sidearm" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-cmd-hq-sidearm" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-cmd-hq-sidearm-opt-hq-bp" name="Bolt Pistol (default)" targetId="se-opt-hq-bp" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cmd-hq-sidearm-opt-hq-plasma-pist" name="Plasma Pistol" targetId="se-opt-hq-plasma-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cmd-hq-sidearm-opt-hq-melta-pist" name="Inferno Pistol" targetId="se-opt-hq-melta-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cmd-hq-sidearm-opt-hq-volk-pist" name="Volkite Serpenta" targetId="se-opt-hq-volk-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cmd-hq-sidearm-opt-hq-combi" name="Combi-Bolter" targetId="se-opt-hq-combi" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-cmd-hq-melee" name="Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hq-power">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-cmd-hq-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-cmd-hq-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-cmd-hq-melee-opt-hq-power" name="Power Sword (default)" targetId="se-opt-hq-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cmd-hq-melee-opt-hq-thunder" name="Thunder Hammer" targetId="se-opt-hq-thunder" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cmd-hq-melee-opt-hq-paragon" name="Paragon Blade" targetId="se-opt-hq-paragon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cmd-hq-melee-opt-hq-fist" name="Power Fist" targetId="se-opt-hq-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-praetor" name="Legion Praetor" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-praetor" targetId="cat-hq" primary="true"/></categoryLinks>
@@ -349,6 +981,33 @@
         <infoLink id="il-la-praetor-1" name="Chosen Warriors" targetId="note-la-praetor-1" type="rule"/>
         <infoLink id="il-la-praetor-2" name="Invulnerable 4+" targetId="note-la-praetor-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-praetor-hq-sidearm" name="Sidearm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hq-bp">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-praetor-hq-sidearm" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-praetor-hq-sidearm" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-praetor-hq-sidearm-opt-hq-bp" name="Bolt Pistol (default)" targetId="se-opt-hq-bp" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-praetor-hq-sidearm-opt-hq-plasma-pist" name="Plasma Pistol" targetId="se-opt-hq-plasma-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-praetor-hq-sidearm-opt-hq-melta-pist" name="Inferno Pistol" targetId="se-opt-hq-melta-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-praetor-hq-sidearm-opt-hq-volk-pist" name="Volkite Serpenta" targetId="se-opt-hq-volk-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-praetor-hq-sidearm-opt-hq-combi" name="Combi-Bolter" targetId="se-opt-hq-combi" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-praetor-hq-melee" name="Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hq-paragon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-praetor-hq-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-praetor-hq-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-praetor-hq-melee-opt-hq-paragon" name="Paragon Blade" targetId="se-opt-hq-paragon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-praetor-hq-melee-opt-hq-thunder" name="Thunder Hammer" targetId="se-opt-hq-thunder" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-praetor-hq-melee-opt-hq-fist" name="Power Fist" targetId="se-opt-hq-fist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-praetor-hq-melee-opt-hq-power" name="Power Sword (default)" targetId="se-opt-hq-power" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-chaplain" name="Legion Chaplain" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-chaplain" targetId="cat-hq" primary="true"/></categoryLinks>
@@ -373,6 +1032,19 @@
         <infoLink id="il-la-chaplain-0" name="Commander" targetId="note-la-chaplain-0" type="rule"/>
         <infoLink id="il-la-chaplain-1" name="Zealot" targetId="note-la-chaplain-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-chaplain-hq-sidearm" name="Sidearm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hq-bp">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-chaplain-hq-sidearm" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-chaplain-hq-sidearm" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-chaplain-hq-sidearm-opt-hq-bp" name="Bolt Pistol (default)" targetId="se-opt-hq-bp" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-chaplain-hq-sidearm-opt-hq-combi" name="Combi-Bolter" targetId="se-opt-hq-combi" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-chaplain-hq-sidearm-opt-hq-plasma-pist" name="Plasma Pistol" targetId="se-opt-hq-plasma-pist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-librarian" name="Legion Librarian" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-librarian" targetId="cat-hq" primary="true"/></categoryLinks>
@@ -403,6 +1075,19 @@
         <infoLink id="il-la-librarian-0" name="Commander" targetId="note-la-librarian-0" type="rule"/>
         <infoLink id="il-la-librarian-1" name="Psyker ML1" targetId="note-la-librarian-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-librarian-hq-sidearm" name="Sidearm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hq-bp">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-librarian-hq-sidearm" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-librarian-hq-sidearm" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-librarian-hq-sidearm-opt-hq-bp" name="Bolt Pistol (default)" targetId="se-opt-hq-bp" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-librarian-hq-sidearm-opt-hq-plasma-pist" name="Plasma Pistol" targetId="se-opt-hq-plasma-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-librarian-hq-sidearm-opt-hq-volk-pist" name="Volkite Serpenta" targetId="se-opt-hq-volk-pist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-signal" name="Master of Signal" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-signal" targetId="cat-hq" primary="true"/></categoryLinks>
@@ -451,6 +1136,20 @@
         <infoLink id="il-la-moritat-0" name="Chosen Warriors" targetId="note-la-moritat-0" type="rule"/>
         <infoLink id="il-la-moritat-1" name="Lone Killer" targetId="note-la-moritat-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-moritat-hq-sidearm" name="Pistol Pair" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hq-bp">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-moritat-hq-sidearm" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-moritat-hq-sidearm" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-moritat-hq-sidearm-opt-hq-bp" name="Bolt Pistol (default)" targetId="se-opt-hq-bp" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-moritat-hq-sidearm-opt-hq-plasma-pist" name="Plasma Pistol" targetId="se-opt-hq-plasma-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-moritat-hq-sidearm-opt-hq-melta-pist" name="Inferno Pistol" targetId="se-opt-hq-melta-pist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-moritat-hq-sidearm-opt-hq-volk-pist" name="Volkite Serpenta" targetId="se-opt-hq-volk-pist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-apothecary" name="Apothecarion Detachment" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-apothecary" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -498,6 +1197,32 @@
         <infoLink id="il-la-tactical-0" name="Line" targetId="note-la-tactical-0" type="rule"/>
         <infoLink id="il-la-tactical-1" name="Fury of the Legion" targetId="note-la-tactical-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-tactical-squad-loadout" name="Squad Special Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tactical-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tactical-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-tactical-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tactical-squad-loadout-opt-plasma" name="Plasma Guns (2 models swap)" targetId="se-opt-plasma" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tactical-squad-loadout-opt-melta" name="Melta Guns (2 models swap)" targetId="se-opt-melta" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tactical-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tactical-squad-loadout-opt-flamer" name="Flamers (2 models swap)" targetId="se-opt-flamer" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-tactical-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tactical-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tactical-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-tactical-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tactical-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tactical-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-assault" name="Assault Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-assault" targetId="cat-troops" primary="true"/></categoryLinks>
@@ -522,6 +1247,30 @@
         <infoLink id="il-la-assault-0" name="Jump Pack" targetId="note-la-assault-0" type="rule"/>
         <infoLink id="il-la-assault-1" name="Line" targetId="note-la-assault-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-assault-squad-loadout" name="Squad Special Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-assault-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-assault-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-assault-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-assault-squad-loadout-opt-plasma" name="Plasma Guns (2 models swap)" targetId="se-opt-plasma" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-assault-squad-loadout-opt-melta" name="Melta Guns (2 models swap)" targetId="se-opt-melta" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-assault-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-assault-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-assault-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-assault-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-assault-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-assault-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-breacher" name="Breacher Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-breacher" targetId="cat-troops" primary="true"/></categoryLinks>
@@ -551,6 +1300,31 @@
       <infoGroups><infoGroup id="ig-la-breacher" name="Rules"><infoLinks>
         <infoLink id="il-la-breacher-0" name="Line" targetId="note-la-breacher-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-breacher-squad-loadout" name="Squad Special Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-breacher-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-breacher-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-breacher-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-breacher-squad-loadout-opt-melta" name="Melta Guns (2 models swap)" targetId="se-opt-melta" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-breacher-squad-loadout-opt-flamer" name="Flamers (2 models swap)" targetId="se-opt-flamer" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-breacher-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-breacher-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-breacher-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-breacher-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-breacher-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-breacher-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-breacher-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-despoiler" name="Despoiler Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-despoiler" targetId="cat-troops" primary="true"/></categoryLinks>
@@ -574,6 +1348,32 @@
       <infoGroups><infoGroup id="ig-la-despoiler" name="Rules"><infoLinks>
         <infoLink id="il-la-despoiler-0" name="Line" targetId="note-la-despoiler-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-despoiler-squad-loadout" name="Squad Special Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-despoiler-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-despoiler-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-despoiler-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-despoiler-squad-loadout-opt-plasma" name="Plasma Guns (2 models swap)" targetId="se-opt-plasma" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-despoiler-squad-loadout-opt-melta" name="Melta Guns (2 models swap)" targetId="se-opt-melta" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-despoiler-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-despoiler-squad-loadout-opt-flamer" name="Flamers (2 models swap)" targetId="se-opt-flamer" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-despoiler-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-despoiler-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-despoiler-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-despoiler-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-despoiler-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-despoiler-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-recon" name="Reconnaissance Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-recon" targetId="cat-troops" primary="true"/></categoryLinks>
@@ -599,6 +1399,30 @@
         <infoLink id="il-la-recon-1" name="Scout" targetId="note-la-recon-1" type="rule"/>
         <infoLink id="il-la-recon-2" name="Infiltrate" targetId="note-la-recon-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-recon-squad-loadout" name="Squad Special Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-recon-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-recon-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-recon-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-recon-squad-loadout-opt-rotor" name="Rotor Cannon (Recon only)" targetId="se-opt-rotor" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-recon-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-recon-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-recon-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-recon-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-recon-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-recon-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-recon-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-scout" name="Scout Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-scout" targetId="cat-troops" primary="true"/></categoryLinks>
@@ -624,6 +1448,29 @@
         <infoLink id="il-la-scout-1" name="Scout" targetId="note-la-scout-1" type="rule"/>
         <infoLink id="il-la-scout-2" name="Infiltrate" targetId="note-la-scout-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-scout-squad-loadout" name="Squad Special Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-scout-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-scout-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-scout-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-scout-squad-loadout-opt-rotor" name="Rotor Cannon (Recon only)" targetId="se-opt-rotor" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-scout-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-scout-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-scout-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-scout-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-scout-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-scout-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-support" name="Tactical Support Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-support" targetId="cat-troops" primary="true"/></categoryLinks>
@@ -647,6 +1494,31 @@
       <infoGroups><infoGroup id="ig-la-support" name="Rules"><infoLinks>
         <infoLink id="il-la-support-0" name="Line" targetId="note-la-support-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-support-squad-loadout" name="Support Weapons (all models)" hidden="false" collective="false" defaultSelectionEntryId="se-opt-plasma">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-support-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-support-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-support-squad-loadout-opt-plasma" name="Plasma Guns (2 models swap)" targetId="se-opt-plasma" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-support-squad-loadout-opt-melta" name="Melta Guns (2 models swap)" targetId="se-opt-melta" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-support-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-support-squad-loadout-opt-flamer" name="Flamers (2 models swap)" targetId="se-opt-flamer" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-support-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-support-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-support-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-support-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-support-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-support-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-veteran" name="Veteran Tactical Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-veteran" targetId="cat-troops" primary="true"/></categoryLinks>
@@ -671,6 +1543,32 @@
         <infoLink id="il-la-veteran-0" name="Line" targetId="note-la-veteran-0" type="rule"/>
         <infoLink id="il-la-veteran-1" name="Chosen Warriors" targetId="note-la-veteran-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-veteran-squad-loadout" name="Veteran Special Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-veteran-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-veteran-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-veteran-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-veteran-squad-loadout-opt-plasma" name="Plasma Guns (2 models swap)" targetId="se-opt-plasma" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-veteran-squad-loadout-opt-melta" name="Melta Guns (2 models swap)" targetId="se-opt-melta" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-veteran-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-veteran-squad-loadout-opt-flamer" name="Flamers (2 models swap)" targetId="se-opt-flamer" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-veteran-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-veteran-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-veteran-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-veteran-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-veteran-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-veteran-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-destroyer" name="Destroyer Assault Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-destroyer" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -695,6 +1593,19 @@
         <infoLink id="il-la-destroyer-0" name="Jump Pack" targetId="note-la-destroyer-0" type="rule"/>
         <infoLink id="il-la-destroyer-1" name="Rad Grenades — -1 Sv to enemy in melee" targetId="note-la-destroyer-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-destroyer-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-destroyer-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-destroyer-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-destroyer-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-destroyer-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-destroyer-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-seeker" name="Seeker Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-seeker" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -718,6 +1629,19 @@
       <infoGroups><infoGroup id="ig-la-seeker" name="Rules"><infoLinks>
         <infoLink id="il-la-seeker-0" name="Marked for Death — choose 1 enemy unit pre-game: +1 Hit vs it" targetId="note-la-seeker-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-seeker-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-seeker-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-seeker-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-seeker-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-seeker-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-seeker-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-cataphractii" name="Cataphractii Terminators" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-cataphractii" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -749,6 +1673,20 @@
         <infoLink id="il-la-cataphractii-1" name="Implacable" targetId="note-la-cataphractii-1" type="rule"/>
         <infoLink id="il-la-cataphractii-2" name="Invulnerable 4+" targetId="note-la-cataphractii-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-cataphractii-term-melee" name="Squad Melee Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-term-fist">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-cataphractii-term-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-cataphractii-term-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-cataphractii-term-melee-opt-term-fist" name="Power Fists (default)" targetId="se-opt-term-fist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cataphractii-term-melee-opt-term-chainfist" name="Chainfists" targetId="se-opt-term-chainfist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cataphractii-term-melee-opt-term-claws" name="Lightning Claws" targetId="se-opt-term-claws" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-cataphractii-term-melee-opt-term-thunder" name="Thunder Hammers" targetId="se-opt-term-thunder" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-tartaros" name="Tartaros Terminators" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-tartaros" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -779,6 +1717,19 @@
         <infoLink id="il-la-tartaros-0" name="Deep Strike" targetId="note-la-tartaros-0" type="rule"/>
         <infoLink id="il-la-tartaros-1" name="Implacable" targetId="note-la-tartaros-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-tartaros-term-melee" name="Squad Melee Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-term-fist">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tartaros-term-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tartaros-term-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-tartaros-term-melee-opt-term-fist" name="Power Fists (default)" targetId="se-opt-term-fist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tartaros-term-melee-opt-term-chainfist" name="Chainfists" targetId="se-opt-term-chainfist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-tartaros-term-melee-opt-term-claws" name="Lightning Claws" targetId="se-opt-term-claws" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-contemptor" name="Contemptor Dreadnought" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-contemptor" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -810,6 +1761,29 @@
         <infoLink id="il-la-contemptor-1" name="Walker" targetId="note-la-contemptor-1" type="rule"/>
         <infoLink id="il-la-contemptor-2" name="Invulnerable 5+" targetId="note-la-contemptor-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-contemptor-dread-arm-1" name="Right Arm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-dread-assault">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-contemptor-dread-arm-1" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-contemptor-dread-arm-1" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-contemptor-dread-arm-1-opt-dread-assault" name="Assault Cannon (default Contemptor)" targetId="se-opt-dread-assault" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-contemptor-dread-arm-1-opt-dread-multi" name="Multi-Melta" targetId="se-opt-dread-multi" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-contemptor-dread-arm-1-opt-dread-twinlas" name="Twin Lascannon" targetId="se-opt-dread-twinlas" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-contemptor-dread-arm-2" name="Left Arm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-dread-fist">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-contemptor-dread-arm-2" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-contemptor-dread-arm-2" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-contemptor-dread-arm-2-opt-dread-fist" name="Power Fist (default)" targetId="se-opt-dread-fist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-contemptor-dread-arm-2-opt-dread-claw" name="Siege Drill" targetId="se-opt-dread-claw" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-castraferrum" name="Dreadnought Talon (Castraferrum)" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-castraferrum" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -840,6 +1814,29 @@
         <infoLink id="il-la-castraferrum-0" name="Vehicle" targetId="note-la-castraferrum-0" type="rule"/>
         <infoLink id="il-la-castraferrum-1" name="Walker" targetId="note-la-castraferrum-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-castraferrum-dread-arm-1" name="Ranged Arm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-dread-assault">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-castraferrum-dread-arm-1" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-castraferrum-dread-arm-1" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-castraferrum-dread-arm-1-opt-dread-assault" name="Assault Cannon (default Contemptor)" targetId="se-opt-dread-assault" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-castraferrum-dread-arm-1-opt-dread-multi" name="Multi-Melta" targetId="se-opt-dread-multi" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-castraferrum-dread-arm-1-opt-dread-twinlas" name="Twin Lascannon" targetId="se-opt-dread-twinlas" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-castraferrum-dread-arm-2" name="Melee Arm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-dread-fist">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-castraferrum-dread-arm-2" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-castraferrum-dread-arm-2" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-castraferrum-dread-arm-2-opt-dread-fist" name="Power Fist (default)" targetId="se-opt-dread-fist" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-castraferrum-dread-arm-2-opt-dread-claw" name="Siege Drill" targetId="se-opt-dread-claw" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-leviathan" name="Leviathan Dreadnought" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-leviathan" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -871,6 +1868,29 @@
         <infoLink id="il-la-leviathan-1" name="Walker" targetId="note-la-leviathan-1" type="rule"/>
         <infoLink id="il-la-leviathan-2" name="Invulnerable 4+" targetId="note-la-leviathan-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-leviathan-dread-arm-1" name="Right Arm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-dread-storm">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-leviathan-dread-arm-1" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-leviathan-dread-arm-1" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-leviathan-dread-arm-1-opt-dread-storm" name="Storm Cannon Array" targetId="se-opt-dread-storm" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-leviathan-dread-arm-1-opt-dread-cml" name="Cyclone Missile Launcher" targetId="se-opt-dread-cml" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-leviathan-dread-arm-1-opt-dread-twinlas" name="Twin Lascannon" targetId="se-opt-dread-twinlas" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-leviathan-dread-arm-2" name="Left Arm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-dread-claw">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-leviathan-dread-arm-2" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-leviathan-dread-arm-2" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-leviathan-dread-arm-2-opt-dread-claw" name="Siege Drill" targetId="se-opt-dread-claw" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-leviathan-dread-arm-2-opt-dread-fist" name="Power Fist (default)" targetId="se-opt-dread-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-deredeo" name="Deredeo Dreadnought" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-deredeo" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -902,6 +1922,18 @@
         <infoLink id="il-la-deredeo-1" name="Walker" targetId="note-la-deredeo-1" type="rule"/>
         <infoLink id="il-la-deredeo-2" name="Invulnerable 5+" targetId="note-la-deredeo-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-deredeo-dread-arm-1" name="Primary Mount" hidden="false" collective="false" defaultSelectionEntryId="se-opt-dread-twinlas">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-deredeo-dread-arm-1" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-deredeo-dread-arm-1" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-deredeo-dread-arm-1-opt-dread-twinlas" name="Twin Lascannon" targetId="se-opt-dread-twinlas" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-deredeo-dread-arm-1-opt-dread-cml" name="Cyclone Missile Launcher" targetId="se-opt-dread-cml" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-rapier" name="Rapier Battery" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-rapier" targetId="cat-elites" primary="true"/></categoryLinks>
@@ -925,6 +1957,19 @@
       <infoGroups><infoGroup id="ig-la-rapier" name="Rules"><infoLinks>
         <infoLink id="il-la-rapier-0" name="Artillery" targetId="note-la-rapier-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-rapier-squad-loadout" name="Battery Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hvy-lascannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-rapier-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-rapier-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-rapier-squad-loadout-opt-hvy-lascannon" name="Lascannons" targetId="se-opt-hvy-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-rapier-squad-loadout-opt-hvy-multi" name="Multi-Meltas" targetId="se-opt-hvy-multi" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-rapier-squad-loadout-opt-hvy-plasma" name="Plasma Cannons" targetId="se-opt-hvy-plasma" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-heavy" name="Heavy Support Squad" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-heavy" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -948,6 +1993,34 @@
       <infoGroups><infoGroup id="ig-la-heavy" name="Rules"><infoLinks>
         <infoLink id="il-la-heavy-0" name="Line" targetId="note-la-heavy-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-heavy-squad-loadout" name="Heavy Squad Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hvy-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-heavy-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-heavy-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-heavy-squad-loadout-opt-hvy-bolters" name="Heavy Bolters (default)" targetId="se-opt-hvy-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-squad-loadout-opt-hvy-lascannon" name="Lascannons" targetId="se-opt-hvy-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-squad-loadout-opt-hvy-missile" name="Missile Launchers (Krak)" targetId="se-opt-hvy-missile" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-squad-loadout-opt-hvy-multi" name="Multi-Meltas" targetId="se-opt-hvy-multi" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-squad-loadout-opt-hvy-plasma" name="Plasma Cannons" targetId="se-opt-hvy-plasma" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-squad-loadout-opt-hvy-volkite" name="Volkite Culverins" targetId="se-opt-hvy-volkite" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-squad-loadout-opt-hvy-autocannon" name="Autocannons" targetId="se-opt-hvy-autocannon" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-heavy-sgt-melee" name="Sergeant Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sgt-chainsword">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-heavy-sgt-melee" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-heavy-sgt-melee" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-heavy-sgt-melee-opt-sgt-chainsword" name="Sgt: Chainsword (default)" targetId="se-opt-sgt-chainsword" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-sgt-melee-opt-sgt-power" name="Sgt: Power Weapon" targetId="se-opt-sgt-power" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-heavy-sgt-melee-opt-sgt-fist" name="Sgt: Power Fist" targetId="se-opt-sgt-fist" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-predator" name="Predator Squadron" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-predator" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -977,6 +2050,31 @@
       <infoGroups><infoGroup id="ig-la-predator" name="Rules"><infoLinks>
         <infoLink id="il-la-predator-0" name="Vehicle" targetId="note-la-predator-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-predator-tank-turret" name="Turret Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-pred-autocannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-predator-tank-turret" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-predator-tank-turret" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-predator-tank-turret-opt-pred-autocannon" name="Autocannon Turret (default)" targetId="se-opt-pred-autocannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-predator-tank-turret-opt-pred-laser" name="Predator Lascannon Turret" targetId="se-opt-pred-laser" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-predator-tank-turret-opt-pred-magna" name="Magna-Melta Turret" targetId="se-opt-pred-magna" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-predator-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-none">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-predator-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-predator-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-predator-tank-sponsons-opt-sp-none" name="No Sponsons (default)" targetId="se-opt-sp-none" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-predator-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-predator-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-predator-tank-sponsons-opt-sp-flamer" name="Heavy Flamer Sponsons" targetId="se-opt-sp-flamer" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-sicaran" name="Sicaran Battle Tank" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-sicaran" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1001,6 +2099,19 @@
         <infoLink id="il-la-sicaran-0" name="Vehicle" targetId="note-la-sicaran-0" type="rule"/>
         <infoLink id="il-la-sicaran-1" name="Fast" targetId="note-la-sicaran-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-sicaran-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-none">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-sicaran-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-sicaran-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-sicaran-tank-sponsons-opt-sp-none" name="No Sponsons (default)" targetId="se-opt-sp-none" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-sicaran-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-sicaran-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-sicaran-arcus" name="Sicaran Arcus" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-sicaran-arcus" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1025,6 +2136,18 @@
         <infoLink id="il-la-sicaran-arcus-0" name="Vehicle" targetId="note-la-sicaran-arcus-0" type="rule"/>
         <infoLink id="il-la-sicaran-arcus-1" name="Fast" targetId="note-la-sicaran-arcus-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-sicaran-arcus-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-none">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-sicaran-arcus-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-sicaran-arcus-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-sicaran-arcus-tank-sponsons-opt-sp-none" name="No Sponsons (default)" targetId="se-opt-sp-none" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-sicaran-arcus-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-sicaran-punisher" name="Sicaran Punisher" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-sicaran-punisher" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1049,6 +2172,18 @@
         <infoLink id="il-la-sicaran-punisher-0" name="Vehicle" targetId="note-la-sicaran-punisher-0" type="rule"/>
         <infoLink id="il-la-sicaran-punisher-1" name="Fast" targetId="note-la-sicaran-punisher-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-sicaran-punisher-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-none">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-sicaran-punisher-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-sicaran-punisher-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-sicaran-punisher-tank-sponsons-opt-sp-none" name="No Sponsons (default)" targetId="se-opt-sp-none" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-sicaran-punisher-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-sicaran-omega" name="Sicaran Omega" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-sicaran-omega" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1073,6 +2208,18 @@
         <infoLink id="il-la-sicaran-omega-0" name="Vehicle" targetId="note-la-sicaran-omega-0" type="rule"/>
         <infoLink id="il-la-sicaran-omega-1" name="Fast" targetId="note-la-sicaran-omega-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-sicaran-omega-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-none">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-sicaran-omega-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-sicaran-omega-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-sicaran-omega-tank-sponsons-opt-sp-none" name="No Sponsons (default)" targetId="se-opt-sp-none" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-sicaran-omega-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-kratos" name="Kratos Heavy Tank" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-kratos" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1102,6 +2249,19 @@
       <infoGroups><infoGroup id="ig-la-kratos" name="Rules"><infoLinks>
         <infoLink id="il-la-kratos-0" name="Vehicle" targetId="note-la-kratos-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-kratos-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-none">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-kratos-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-kratos-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-kratos-tank-sponsons-opt-sp-none" name="No Sponsons (default)" targetId="se-opt-sp-none" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-kratos-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-kratos-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-vindicator" name="Vindicator Squadron" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-vindicator" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1149,6 +2309,18 @@
         <infoLink id="il-la-lr-proteus-0" name="Vehicle" targetId="note-la-lr-proteus-0" type="rule"/>
         <infoLink id="il-la-lr-proteus-1" name="Transport (1 unit)" targetId="note-la-lr-proteus-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-lr-proteus-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-lascannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-lr-proteus-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-lr-proteus-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-lr-proteus-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-lr-proteus-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-spartan" name="Spartan Assault Tank" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-spartan" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1173,6 +2345,19 @@
         <infoLink id="il-la-spartan-0" name="Vehicle" targetId="note-la-spartan-0" type="rule"/>
         <infoLink id="il-la-spartan-1" name="Transport (2 units)" targetId="note-la-spartan-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-spartan-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-lascannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-spartan-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-spartan-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-spartan-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-spartan-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-spartan-tank-sponsons-opt-sp-flamer" name="Heavy Flamer Sponsons" targetId="se-opt-sp-flamer" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-whirlwind" name="Whirlwind Scorpius" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-whirlwind" targetId="cat-heavy" primary="true"/></categoryLinks>
@@ -1244,6 +2429,18 @@
         <infoLink id="il-la-outrider-0" name="Fast" targetId="note-la-outrider-0" type="rule"/>
         <infoLink id="il-la-outrider-1" name="Jink" targetId="note-la-outrider-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-outrider-squad-loadout" name="Squad Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-outrider-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-outrider-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-outrider-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-outrider-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-skyhunter" name="Sky-Hunter Squadron" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-skyhunter" targetId="cat-fast" primary="true"/></categoryLinks>
@@ -1268,6 +2465,18 @@
         <infoLink id="il-la-skyhunter-0" name="Fast" targetId="note-la-skyhunter-0" type="rule"/>
         <infoLink id="il-la-skyhunter-1" name="Jink" targetId="note-la-skyhunter-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-skyhunter-squad-loadout" name="Squad Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-volkite">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-skyhunter-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-skyhunter-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-skyhunter-squad-loadout-opt-volkite" name="Volkite Chargers (2 models swap)" targetId="se-opt-volkite" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-skyhunter-squad-loadout-opt-bolters" name="Bolters (default)" targetId="se-opt-bolters" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-speeder" name="Land Speeder Squadron" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-speeder" targetId="cat-fast" primary="true"/></categoryLinks>
@@ -1292,6 +2501,18 @@
         <infoLink id="il-la-speeder-0" name="Fast" targetId="note-la-speeder-0" type="rule"/>
         <infoLink id="il-la-speeder-1" name="Deep Strike" targetId="note-la-speeder-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-speeder-squad-loadout" name="Vehicle Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hvy-bolters">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-speeder-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-speeder-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-speeder-squad-loadout-opt-hvy-bolters" name="Heavy Bolters (default)" targetId="se-opt-hvy-bolters" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-speeder-squad-loadout-opt-hvy-multi" name="Multi-Meltas" targetId="se-opt-hvy-multi" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-javelin" name="Javelin Attack Speeder" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-javelin" targetId="cat-fast" primary="true"/></categoryLinks>
@@ -1322,6 +2543,19 @@
         <infoLink id="il-la-javelin-0" name="Fast" targetId="note-la-javelin-0" type="rule"/>
         <infoLink id="il-la-javelin-1" name="Deep Strike" targetId="note-la-javelin-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-javelin-squad-loadout" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-hvy-lascannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-javelin-squad-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-javelin-squad-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-javelin-squad-loadout-opt-hvy-lascannon" name="Lascannons" targetId="se-opt-hvy-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-javelin-squad-loadout-opt-hvy-missile" name="Missile Launchers (Krak)" targetId="se-opt-hvy-missile" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-javelin-squad-loadout-opt-hvy-multi" name="Multi-Meltas" targetId="se-opt-hvy-multi" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-rhino" name="Rhino" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-rhino" targetId="cat-transport" primary="true"/></categoryLinks>
@@ -1346,6 +2580,20 @@
         <infoLink id="il-la-rhino-0" name="Vehicle" targetId="note-la-rhino-0" type="rule"/>
         <infoLink id="il-la-rhino-1" name="Transport (1 unit)" targetId="note-la-rhino-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-rhino-pintle" name="Pintle Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-pintle-none">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-rhino-pintle" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-rhino-pintle" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-rhino-pintle-opt-pintle-none" name="No Pintle (default)" targetId="se-opt-pintle-none" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-rhino-pintle-opt-pintle-bolter" name="Pintle Storm Bolter" targetId="se-opt-pintle-bolter" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-rhino-pintle-opt-pintle-multi" name="Pintle Multi-Melta" targetId="se-opt-pintle-multi" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-rhino-pintle-opt-pintle-havoc" name="Havoc Launcher" targetId="se-opt-pintle-havoc" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-droppod" name="Drop Pod" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-droppod" targetId="cat-transport" primary="true"/></categoryLinks>
@@ -1441,6 +2689,19 @@
         <infoLink id="il-la-stormeagle-1" name="Hover" targetId="note-la-stormeagle-1" type="rule"/>
         <infoLink id="il-la-stormeagle-2" name="Transport (1 unit)" targetId="note-la-stormeagle-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-stormeagle-fly-loadout" name="Wing Hardpoints" hidden="false" collective="false" defaultSelectionEntryId="se-opt-fly-stock">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-stormeagle-fly-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-stormeagle-fly-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-stormeagle-fly-loadout-opt-fly-stock" name="Standard Loadout (default)" targetId="se-opt-fly-stock" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-stormeagle-fly-loadout-opt-fly-las" name="Wing Lascannons" targetId="se-opt-fly-las" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-stormeagle-fly-loadout-opt-fly-missile" name="Hellstrike Missiles" targetId="se-opt-fly-missile" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-fireraptor" name="Fire Raptor Gunship" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-fireraptor" targetId="cat-flyer" primary="true"/></categoryLinks>
@@ -1471,6 +2732,19 @@
         <infoLink id="il-la-fireraptor-0" name="Flyer" targetId="note-la-fireraptor-0" type="rule"/>
         <infoLink id="il-la-fireraptor-1" name="Hover" targetId="note-la-fireraptor-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-fireraptor-fly-loadout" name="Wing Hardpoints" hidden="false" collective="false" defaultSelectionEntryId="se-opt-fly-stock">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-fireraptor-fly-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-fireraptor-fly-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-fireraptor-fly-loadout-opt-fly-stock" name="Standard Loadout (default)" targetId="se-opt-fly-stock" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-fireraptor-fly-loadout-opt-fly-las" name="Wing Lascannons" targetId="se-opt-fly-las" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-fireraptor-fly-loadout-opt-fly-missile" name="Hellstrike Missiles" targetId="se-opt-fly-missile" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-thunderhawk" name="Thunderhawk Gunship" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-thunderhawk" targetId="cat-low" primary="true"/></categoryLinks>
@@ -1502,6 +2776,18 @@
         <infoLink id="il-la-thunderhawk-1" name="Hover" targetId="note-la-thunderhawk-1" type="rule"/>
         <infoLink id="il-la-thunderhawk-2" name="Transport (3 units)" targetId="note-la-thunderhawk-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-thunderhawk-fly-loadout" name="Wing Hardpoints" hidden="false" collective="false" defaultSelectionEntryId="se-opt-fly-stock">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-thunderhawk-fly-loadout" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-thunderhawk-fly-loadout" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-thunderhawk-fly-loadout-opt-fly-stock" name="Standard Loadout (default)" targetId="se-opt-fly-stock" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-thunderhawk-fly-loadout-opt-fly-las" name="Wing Lascannons" targetId="se-opt-fly-las" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-fellblade" name="Fellblade" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-fellblade" targetId="cat-low" primary="true"/></categoryLinks>
@@ -1532,6 +2818,28 @@
         <infoLink id="il-la-fellblade-0" name="Super-Heavy" targetId="note-la-fellblade-0" type="rule"/>
         <infoLink id="il-la-fellblade-1" name="Vehicle" targetId="note-la-fellblade-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-fellblade-sh-primary" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-fellblade-hvy">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-fellblade-sh-primary" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-fellblade-sh-primary" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-fellblade-sh-primary-opt-fellblade-hvy" name="Fellblade — Accelerator Cannon (default)" targetId="se-opt-fellblade-hvy" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-fellblade-sh-primary-opt-fellblade-laser" name="Fellblade — Laser Destroyer Variant" targetId="se-opt-fellblade-laser" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-fellblade-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-lascannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-fellblade-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-fellblade-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-fellblade-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-fellblade-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-glaive" name="Glaive" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-glaive" targetId="cat-low" primary="true"/></categoryLinks>
@@ -1556,6 +2864,27 @@
         <infoLink id="il-la-glaive-0" name="Super-Heavy" targetId="note-la-glaive-0" type="rule"/>
         <infoLink id="il-la-glaive-1" name="Vehicle" targetId="note-la-glaive-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-glaive-sh-primary" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-glaive-volk">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-glaive-sh-primary" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-glaive-sh-primary" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-glaive-sh-primary-opt-glaive-volk" name="Glaive — Volkite Carronade (default)" targetId="se-opt-glaive-volk" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-glaive-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-lascannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-glaive-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-glaive-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-glaive-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-glaive-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-typhon" name="Typhon Heavy Siege Tank" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-typhon" targetId="cat-low" primary="true"/></categoryLinks>
@@ -1580,6 +2909,27 @@
         <infoLink id="il-la-typhon-0" name="Super-Heavy" targetId="note-la-typhon-0" type="rule"/>
         <infoLink id="il-la-typhon-1" name="Vehicle" targetId="note-la-typhon-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-typhon-sh-primary" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-typhon-cannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-typhon-sh-primary" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-typhon-sh-primary" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-typhon-sh-primary-opt-typhon-cannon" name="Typhon — Dreadhammer Cannon (default)" targetId="se-opt-typhon-cannon" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      <selectionEntryGroup id="seg-typhon-tank-sponsons" name="Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-sp-lascannon">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-typhon-tank-sponsons" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-typhon-tank-sponsons" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-typhon-tank-sponsons-opt-sp-lascannon" name="Lascannon Sponsons" targetId="se-opt-sp-lascannon" type="selectionEntry" hidden="false"/>
+          <entryLink id="el-seg-typhon-tank-sponsons-opt-sp-hvybolter" name="Heavy Bolter Sponsons" targetId="se-opt-sp-hvybolter" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-cerberus" name="Cerberus Heavy Tank Destroyer" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-cerberus" targetId="cat-low" primary="true"/></categoryLinks>
@@ -1604,6 +2954,17 @@
         <infoLink id="il-la-cerberus-0" name="Super-Heavy" targetId="note-la-cerberus-0" type="rule"/>
         <infoLink id="il-la-cerberus-1" name="Vehicle" targetId="note-la-cerberus-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-cerberus-sh-primary" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-cerberus-neutron">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-cerberus-sh-primary" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-cerberus-sh-primary" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-cerberus-sh-primary-opt-cerberus-neutron" name="Cerberus — Neutron Laser (default)" targetId="se-opt-cerberus-neutron" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-falchion" name="Falchion" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-falchion" targetId="cat-low" primary="true"/></categoryLinks>
@@ -1628,6 +2989,17 @@
         <infoLink id="il-la-falchion-0" name="Super-Heavy" targetId="note-la-falchion-0" type="rule"/>
         <infoLink id="il-la-falchion-1" name="Vehicle" targetId="note-la-falchion-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-falchion-sh-primary" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-falchion-vol">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-falchion-sh-primary" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-falchion-sh-primary" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-falchion-sh-primary-opt-falchion-vol" name="Falchion — Volcano Cannon (default)" targetId="se-opt-falchion-vol" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-la-mastodon" name="Mastodon" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-la-mastodon" targetId="cat-low" primary="true"/></categoryLinks>
@@ -1660,6 +3032,17 @@
         <infoLink id="il-la-mastodon-2" name="Transport (3 units)" targetId="note-la-mastodon-2" type="rule"/>
         <infoLink id="il-la-mastodon-3" name="Void Shield 2" targetId="note-la-mastodon-3" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
+          <selectionEntryGroups>
+      <selectionEntryGroup id="seg-mastodon-sh-primary" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-mastodon-skyreaper">
+        <constraints>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-mastodon-sh-primary" type="min"/>
+          <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-mastodon-sh-primary" type="max"/>
+        </constraints>
+        <entryLinks>
+          <entryLink id="el-seg-mastodon-sh-primary-opt-mastodon-skyreaper" name="Mastodon — Skyreaper Battery (default)" targetId="se-opt-mastodon-skyreaper" type="selectionEntry" hidden="false"/>
+        </entryLinks>
+      </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-ll-lion" name="Lion El&#x27;Jonson" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-ll-lion" targetId="cat-low" primary="true"/></categoryLinks>
