@@ -7286,21 +7286,21 @@
     <rule id="rule-vehicle-destruction" name="Vehicle Destruction" hidden="false"><description>D6 on death: 1=Wreck, 2-3=Minor Explosion, 4-5=Major Explosion, 6=Catastrophic Detonation.</description></rule>
     <rule id="rule-titan-kill" name="Titan Kill" hidden="false"><description>Fall direction + Crushing Impact + Reactor Meltdown + Morale Shockwave. See core rules Section 12.</description></rule>
     <rule id="rule-line" name="Line" hidden="false"><description>This unit scores objectives.</description></rule>
-    <rule id="rule-commander" name="Commander" hidden="false"><description>Provides +1 Ld within 6&quot;. Grants 3 Reactions/round instead of 2.</description></rule>
-    <rule id="rule-deep-strike" name="Deep Strike" hidden="false"><description>Deploy from reserve starting Round 2. Place anywhere &gt;3&quot; from enemy.</description></rule>
+    <rule id="rule-commander" name="Commander" hidden="false"><description>Provides +1 Ld within 6". Grants 3 Reactions/round instead of 2.</description></rule>
+    <rule id="rule-deep-strike" name="Deep Strike" hidden="false"><description>Deploy from reserve starting Round 2. Place anywhere &gt;3" from enemy.</description></rule>
     <rule id="rule-fearless" name="Fearless" hidden="false"><description>Auto-pass all Morale checks.</description></rule>
     <rule id="rule-chosen" name="Chosen Warriors" hidden="false"><description>May issue and accept Challenges.</description></rule>
     <rule id="rule-implacable" name="Implacable" hidden="false"><description>Never Pinned. Always moves at full Mv.</description></rule>
-    <rule id="rule-scout" name="Scout" hidden="false"><description>Deploy 2&quot; further forward.</description></rule>
-    <rule id="rule-infiltrate" name="Infiltrate" hidden="false"><description>Deploy anywhere &gt;3&quot; from enemy.</description></rule>
+    <rule id="rule-scout" name="Scout" hidden="false"><description>Deploy 2" further forward.</description></rule>
+    <rule id="rule-infiltrate" name="Infiltrate" hidden="false"><description>Deploy anywhere &gt;3" from enemy.</description></rule>
     <rule id="rule-fast" name="Fast" hidden="false"><description>Jink: +1 Sv vs shooting if moved this round.</description></rule>
     <rule id="rule-psyker" name="Psyker" hidden="false"><description>May manifest psychic powers. ML indicates number of powers per round.</description></rule>
     <rule id="rule-daemon" name="Daemon" hidden="false"><description>Fearless. Invulnerable 5+. Instability: D6 end of round, 1=-1HP, 6=+1HP. Null Vulnerability.</description></rule>
     <rule id="rule-no-overwatch" name="No Overwatch (World Eaters)" hidden="false"><description>This unit may never fire Overwatch when charged.</description></rule>
     <rule id="rule-must-advance" name="Must Advance When Shooting" hidden="false"><description>When shooting, must also advance half Mv toward nearest enemy.</description></rule>
     <rule id="rule-null-zone" name="Null Zone" hidden="false"><description>Enemy Psykers within range cannot manifest. Daemons suffer -1 Atk, -1 Hit.</description></rule>
-    <rule id="rule-null-aegis" name="Null Aegis" hidden="false"><description>Requires Custodes + Sisters within 3&quot;. Psychic Immunity, Daemon Bane, Warp Denial, +1 Reaction.</description></rule>
-    <rule id="rule-emperors-light" name="Boon: Emperor&apos;s Light (Loyalist Innate)" hidden="false"><description>CAMPAIGN ONLY. +1 Ld to all units within 6&quot; of a Character. While Commander is alive, all units gain +1 Ld.</description></rule>
+    <rule id="rule-null-aegis" name="Null Aegis" hidden="false"><description>Requires Custodes + Sisters within 3". Psychic Immunity, Daemon Bane, Warp Denial, +1 Reaction.</description></rule>
+    <rule id="rule-emperors-light" name="Boon: Emperor&apos;s Light (Loyalist Innate)" hidden="false"><description>CAMPAIGN ONLY. +1 Ld to all units within 6" of a Character. While Commander is alive, all units gain +1 Ld.</description></rule>
     <rule id="rule-vengeance" name="Boon: Vengeance for Fallen (Campaign Only)" hidden="false"><description>CAMPAIGN ONLY. Character destroyed: all friendlies +1 Atk for 1 round.</description></rule>
     <rule id="rule-dark-pact" name="Boon: Dark Pact (Campaign Only)" hidden="false"><description>+1 to 1 stat, 1 unit, 1 game. D6 at end: on 1 unit destroyed.</description></rule>
     <rule id="rule-terror-tactics" name="Boon: Terror Tactics (Campaign Only)" hidden="false"><description>CAMPAIGN ONLY. All Traitor charges inflict -1 Ld on the target for the melee combat.</description></rule>
@@ -7323,7 +7323,7 @@
     <rule id="rule-forge-mars" name="Mars (Loyalist)" hidden="false"><description>All Automata gain +1 Ld. Archmagos units may repair 2 HP instead of 1 with Machinator Array.</description></rule>
     <rule id="rule-forge-ryza" name="Ryza" hidden="false"><description>All plasma weapons improve their W value by 1. Gets Hot triggers on 1-2 instead of just 1.</description></rule>
     <rule id="rule-forge-graia" name="Graia" hidden="false"><description>All units gain Stubborn. +1 to Deny the Witch rolls.</description></rule>
-    <rule id="rule-forge-metalica" name="Metalica" hidden="false"><description>All units gain +0.5&quot; Mv. Units may Advance and still fire Heavy weapons at -1 to Hit.</description></rule>
+    <rule id="rule-forge-metalica" name="Metalica" hidden="false"><description>All units gain +0.5" Mv. Units may Advance and still fire Heavy weapons at -1 to Hit.</description></rule>
     <rule id="rule-forge-stygies" name="Stygies VIII" hidden="false"><description>Up to 3 units may Infiltrate. All units count as in cover during Round 1.</description></rule>
     <rule id="rule-forge-xana" name="Xana II (Dark Mechanicum)" hidden="false"><description>All Stalker Constructs gain +1 HP. Noosphere Gestalt bonus kicks in at 2 units instead of 3.</description></rule>
     <rule id="rule-forge-cyclo" name="Cyclothrathe (Dark Mechanicum)" hidden="false"><description>All units gain Rad-saturation (enemy weapons +1 W in melee vs this unit). Scrap Code may be used twice per game.</description></rule>
