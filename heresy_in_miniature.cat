@@ -2570,16 +2570,46 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-archmagos-abeyant-hq-melee" name="Mechadendrite Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-mech-mace">
+        <selectionEntryGroup id="seg-tm-archmagos-abeyant-hq-melee" name="Mechadendrite Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-archmagos-abeyant-hq-melee-inline-mech-mace">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-archmagos-abeyant-hq-melee" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-archmagos-abeyant-hq-melee" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-archmagos-abeyant-hq-melee-opt-tm-mech-mace" name="Mechadendrites + Power Mace (default)" targetId="se-opt-tm-mech-mace" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-archmagos-abeyant-hq-melee-opt-tm-paragon-mech" name="Master-Crafted Mechadendrites" targetId="se-opt-tm-paragon-mech" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-archmagos-abeyant-hq-melee-opt-tm-servo-claw" name="Servo-Claw" targetId="se-opt-tm-servo-claw" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-archmagos-abeyant-hq-melee-inline-mech-mace" name="Mechadendrites + Power Mace (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-mech-mace-seg-tm-archmagos-abeyant-hq-melee-inline" name="Mechadendrites + Power Mace" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">+1 Atk</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-archmagos-abeyant-hq-melee-inline-paragon-mech" name="Master-Crafted Mechadendrites" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-paragon-mech-seg-tm-archmagos-abeyant-hq-melee-inline" name="Master-Crafted Mechadendrites" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Master-crafted, +2 Atk</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-archmagos-abeyant-hq-melee-inline-servo-claw" name="Servo-Claw" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-servo-claw-seg-tm-archmagos-abeyant-hq-melee-inline" name="Servo-Claw" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2609,25 +2639,65 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-techpriest-hq-sidearm" name="Sidearm" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-laspistol">
+        <selectionEntryGroup id="seg-tm-techpriest-hq-sidearm" name="Sidearm" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-techpriest-hq-sidearm-inline-laspistol">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-techpriest-hq-sidearm" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-techpriest-hq-sidearm" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-techpriest-hq-sidearm-opt-tm-laspistol" name="Laspistol (default)" targetId="se-opt-tm-laspistol" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-techpriest-hq-sidearm-opt-tm-volk-pist" name="Volkite Serpenta" targetId="se-opt-tm-volk-pist" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-techpriest-hq-sidearm-inline-laspistol" name="Laspistol (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-laspistol-seg-tm-techpriest-hq-sidearm-inline" name="Laspistol" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">5+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-techpriest-hq-sidearm-inline-volk-pist" name="Volkite Serpenta" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-volk-pist-seg-tm-techpriest-hq-sidearm-inline" name="Volkite Serpenta" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Deflagrate, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="seg-tm-techpriest-hq-melee" name="Melee Implement" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-tp-claw">
+        <selectionEntryGroup id="seg-tm-techpriest-hq-melee" name="Melee Implement" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-techpriest-hq-melee-inline-tp-claw">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-techpriest-hq-melee" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-techpriest-hq-melee" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-techpriest-hq-melee-opt-tm-tp-claw" name="Servo-Claw (default)" targetId="se-opt-tm-tp-claw" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-techpriest-hq-melee-opt-tm-tp-axe" name="Power Axe" targetId="se-opt-tm-tp-axe" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-techpriest-hq-melee-inline-tp-claw" name="Servo-Claw (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-tp-claw-seg-tm-techpriest-hq-melee-inline" name="Servo-Claw" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-techpriest-hq-melee-inline-tp-axe" name="Power Axe" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-tp-axe-seg-tm-techpriest-hq-melee-inline" name="Power Axe" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2657,16 +2727,46 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-thrall-squad-loadout" name="Squad Special Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-thrall-laslock">
+        <selectionEntryGroup id="seg-tm-thrall-squad-loadout" name="Squad Special Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-thrall-squad-loadout-inline-thrall-laslock">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-thrall-squad-loadout" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-thrall-squad-loadout" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-thrall-squad-loadout-opt-tm-thrall-laslock" name="Las-Locks (default)" targetId="se-opt-tm-thrall-laslock" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-thrall-squad-loadout-opt-tm-thrall-flamer" name="Squad Flamer" targetId="se-opt-tm-thrall-flamer" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-thrall-squad-loadout-opt-tm-thrall-mauler" name="Mauler Stub Cannon" targetId="se-opt-tm-thrall-mauler" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-thrall-squad-loadout-inline-thrall-laslock" name="Las-Locks (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-thrall-laslock-seg-tm-thrall-squad-loadout-inline" name="Las-Locks" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">5+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-thrall-squad-loadout-inline-thrall-flamer" name="Squad Flamer" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="3"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-thrall-flamer-seg-tm-thrall-squad-loadout-inline" name="Squad Flamer" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">2"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Template, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-thrall-squad-loadout-inline-thrall-mauler" name="Mauler Stub Cannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-thrall-mauler-seg-tm-thrall-squad-loadout-inline" name="Mauler Stub Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2696,25 +2796,65 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-secutor-sec-ranged" name="Ranged Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-sec-bolter">
+        <selectionEntryGroup id="seg-tm-secutor-sec-ranged" name="Ranged Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-secutor-sec-ranged-inline-sec-bolter">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-secutor-sec-ranged" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-secutor-sec-ranged" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-secutor-sec-ranged-opt-tm-sec-bolter" name="Maxima Bolter (default)" targetId="se-opt-tm-sec-bolter" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-secutor-sec-ranged-opt-tm-sec-volk" name="Volkite Charger" targetId="se-opt-tm-sec-volk" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-secutor-sec-ranged-inline-sec-bolter" name="Maxima Bolter (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-sec-bolter-seg-tm-secutor-sec-ranged-inline" name="Maxima Bolter" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-secutor-sec-ranged-inline-sec-volk" name="Volkite Charger" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-sec-volk-seg-tm-secutor-sec-ranged-inline" name="Volkite Charger" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Deflagrate</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="seg-tm-secutor-sec-melee" name="Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-sec-axe">
+        <selectionEntryGroup id="seg-tm-secutor-sec-melee" name="Melee Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-secutor-sec-melee-inline-sec-axe">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-secutor-sec-melee" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-secutor-sec-melee" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-secutor-sec-melee-opt-tm-sec-axe" name="Power Axe + Rad Furnace (default)" targetId="se-opt-tm-sec-axe" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-secutor-sec-melee-opt-tm-sec-mace" name="Power Maul" targetId="se-opt-tm-sec-mace" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-secutor-sec-melee-inline-sec-axe" name="Power Axe + Rad Furnace (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-sec-axe-seg-tm-secutor-sec-melee-inline" name="Power Axe &amp; Rad Furnace" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">enemy +1 W vs this unit</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-secutor-sec-melee-inline-sec-mace" name="Power Maul" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-sec-mace-seg-tm-secutor-sec-melee-inline" name="Power Maul" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Concussive</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2744,15 +2884,35 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-ursarax-urs-melee" name="Melee Armament" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-urs-claws">
+        <selectionEntryGroup id="seg-tm-ursarax-urs-melee" name="Melee Armament" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-ursarax-urs-melee-inline-urs-claws">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-ursarax-urs-melee" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-ursarax-urs-melee" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-ursarax-urs-melee-opt-tm-urs-claws" name="Power Claws (default)" targetId="se-opt-tm-urs-claws" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-ursarax-urs-melee-opt-tm-urs-fists" name="Lightning Fists" targetId="se-opt-tm-urs-fists" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-ursarax-urs-melee-inline-urs-claws" name="Power Claws (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-urs-claws-seg-tm-ursarax-urs-melee-inline" name="Power Claws" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Shred</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-ursarax-urs-melee-inline-urs-fists" name="Lightning Fists" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-urs-fists-seg-tm-ursarax-urs-melee-inline" name="Lightning Fists" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Shred, Rending</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2782,15 +2942,35 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-scyllax-scyl-aux" name="Auxiliary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-scyl-cleanser">
+        <selectionEntryGroup id="seg-tm-scyllax-scyl-aux" name="Auxiliary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-scyllax-scyl-aux-inline-scyl-cleanser">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-scyllax-scyl-aux" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-scyllax-scyl-aux" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-scyllax-scyl-aux-opt-tm-scyl-cleanser" name="Rad-Cleanser (default)" targetId="se-opt-tm-scyl-cleanser" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-scyllax-scyl-aux-opt-tm-scyl-flamer" name="Heavy Phosphor Flamer" targetId="se-opt-tm-scyl-flamer" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-scyllax-scyl-aux-inline-scyl-cleanser" name="Rad-Cleanser (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-scyl-cleanser-seg-tm-scyllax-scyl-aux-inline" name="Rad-Cleanser" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">1"</characteristic>
+          <characteristic name="W" typeId="cw-w">5+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Template, Poison 3+</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-scyllax-scyl-aux-inline-scyl-flamer" name="Heavy Phosphor Flamer" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-scyl-flamer-seg-tm-scyllax-scyl-aux-inline" name="Heavy Phosphor Flamer" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">2"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Template, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2820,14 +3000,24 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-arlatax-arl-melee" name="Combat Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-arl-scourge">
+        <selectionEntryGroup id="seg-tm-arlatax-arl-melee" name="Combat Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-arlatax-arl-melee-inline-arl-scourge">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-arlatax-arl-melee" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-arlatax-arl-melee" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-arlatax-arl-melee-opt-tm-arl-scourge" name="Arc Scourge + Power Claw (default)" targetId="se-opt-tm-arl-scourge" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-arlatax-arl-melee-inline-arl-scourge" name="Arc Scourge + Power Claw (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-arl-scourge-seg-tm-arlatax-arl-melee-inline" name="Arc Scourge + Power Claw" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Armourbane, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2857,14 +3047,24 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-vultarax-vult-loadout" name="Weapon Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-vult-arc">
+        <selectionEntryGroup id="seg-tm-vultarax-vult-loadout" name="Weapon Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-vultarax-vult-loadout-inline-vult-arc">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-vultarax-vult-loadout" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-vultarax-vult-loadout" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-vultarax-vult-loadout-opt-tm-vult-arc" name="Arc Blaster + Havoc Launchers (default)" targetId="se-opt-tm-vult-arc" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-vultarax-vult-loadout-inline-vult-arc" name="Arc Blaster + Havoc Launchers (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-vult-arc-seg-tm-vultarax-vult-loadout-inline" name="Arc Blaster + Havoc Launchers" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Armourbane</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2888,16 +3088,46 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-destructor-destr-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-destr-irrad">
+        <selectionEntryGroup id="seg-tm-destructor-destr-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-destructor-destr-primary-inline-destr-irrad">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-destructor-destr-primary" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-destructor-destr-primary" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-destructor-destr-primary-opt-tm-destr-irrad" name="Irradiation Engine (default)" targetId="se-opt-tm-destr-irrad" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-destructor-destr-primary-opt-tm-destr-photon" name="Photon Thruster" targetId="se-opt-tm-destr-photon" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-destructor-destr-primary-opt-tm-destr-conv" name="Conversion Beamer" targetId="se-opt-tm-destr-conv" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-destructor-destr-primary-inline-destr-irrad" name="Irradiation Engine (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-destr-irrad-seg-tm-destructor-destr-primary-inline" name="Irradiation Engine" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Template, Poison 2+, Ignores Cover</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-destructor-destr-primary-inline-destr-photon" name="Photon Thruster" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-destr-photon-seg-tm-destructor-destr-primary-inline" name="Photon Thruster" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Gets Hot, Instant</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-destructor-destr-primary-inline-destr-conv" name="Conversion Beamer" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-destr-conv-seg-tm-destructor-destr-primary-inline" name="Conversion Beamer" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">10"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/8/10</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1/-2/-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Variable</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2921,16 +3151,38 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-krios-venator-vena-pintle" name="Pintle" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-pintle-none">
+        <selectionEntryGroup id="seg-tm-krios-venator-vena-pintle" name="Pintle" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-krios-venator-vena-pintle-inline-pintle-none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-krios-venator-vena-pintle" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-krios-venator-vena-pintle" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-krios-venator-vena-pintle-opt-tm-pintle-none" name="No Pintle (default)" targetId="se-opt-tm-pintle-none" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-krios-venator-vena-pintle-opt-tm-pintle-bolter" name="Pintle Storm Bolter" targetId="se-opt-tm-pintle-bolter" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-krios-venator-vena-pintle-opt-tm-pintle-volk" name="Pintle Volkite Sentinel" targetId="se-opt-tm-pintle-volk" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-krios-venator-vena-pintle-inline-pintle-none" name="No Pintle (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-krios-venator-vena-pintle-inline-pintle-bolter" name="Pintle Storm Bolter" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-pintle-bolter-seg-tm-krios-venator-vena-pintle-inline" name="Pintle Storm Bolter" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rapid Fire, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-krios-venator-vena-pintle-inline-pintle-volk" name="Pintle Volkite Sentinel" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-pintle-volk-seg-tm-krios-venator-vena-pintle-inline" name="Pintle Volkite Sentinel" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Deflagrate</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2960,16 +3212,38 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-karacnos-kar-pintle" name="Pintle" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-pintle-none">
+        <selectionEntryGroup id="seg-tm-karacnos-kar-pintle" name="Pintle" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-karacnos-kar-pintle-inline-pintle-none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-karacnos-kar-pintle" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-karacnos-kar-pintle" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-karacnos-kar-pintle-opt-tm-pintle-none" name="No Pintle (default)" targetId="se-opt-tm-pintle-none" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-karacnos-kar-pintle-opt-tm-pintle-bolter" name="Pintle Storm Bolter" targetId="se-opt-tm-pintle-bolter" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-karacnos-kar-pintle-opt-tm-pintle-volk" name="Pintle Volkite Sentinel" targetId="se-opt-tm-pintle-volk" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-karacnos-kar-pintle-inline-pintle-none" name="No Pintle (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-karacnos-kar-pintle-inline-pintle-bolter" name="Pintle Storm Bolter" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-pintle-bolter-seg-tm-karacnos-kar-pintle-inline" name="Pintle Storm Bolter" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rapid Fire, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-karacnos-kar-pintle-inline-pintle-volk" name="Pintle Volkite Sentinel" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-pintle-volk-seg-tm-karacnos-kar-pintle-inline" name="Pintle Volkite Sentinel" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Deflagrate</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2999,16 +3273,38 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-knight-magaera-mag-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-knight-cara-none">
+        <selectionEntryGroup id="seg-tm-knight-magaera-mag-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-magaera-mag-cara-inline-knight-cara-none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-magaera-mag-cara" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-magaera-mag-cara" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-knight-magaera-mag-cara-opt-tm-knight-cara-none" name="No Carapace (default)" targetId="se-opt-tm-knight-cara-none" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-knight-magaera-mag-cara-opt-tm-knight-cara-stormspear" name="Stormspear Rocket Pod" targetId="se-opt-tm-knight-cara-stormspear" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-knight-magaera-mag-cara-opt-tm-knight-cara-icarus" name="Icarus Autocannon" targetId="se-opt-tm-knight-cara-icarus" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-magaera-mag-cara-inline-knight-cara-none" name="No Carapace (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-magaera-mag-cara-inline-knight-cara-stormspear" name="Stormspear Rocket Pod" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-stormspear-seg-tm-knight-magaera-mag-cara-inline" name="Stormspear Rocket Pod" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-magaera-mag-cara-inline-knight-cara-icarus" name="Icarus Autocannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-icarus-seg-tm-knight-magaera-mag-cara-inline" name="Icarus Autocannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Skyfire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -3038,16 +3334,38 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-knight-styrix-sty-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-knight-cara-none">
+        <selectionEntryGroup id="seg-tm-knight-styrix-sty-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-styrix-sty-cara-inline-knight-cara-none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-styrix-sty-cara" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-styrix-sty-cara" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-knight-styrix-sty-cara-opt-tm-knight-cara-none" name="No Carapace (default)" targetId="se-opt-tm-knight-cara-none" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-knight-styrix-sty-cara-opt-tm-knight-cara-stormspear" name="Stormspear Rocket Pod" targetId="se-opt-tm-knight-cara-stormspear" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-knight-styrix-sty-cara-opt-tm-knight-cara-icarus" name="Icarus Autocannon" targetId="se-opt-tm-knight-cara-icarus" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-styrix-sty-cara-inline-knight-cara-none" name="No Carapace (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-styrix-sty-cara-inline-knight-cara-stormspear" name="Stormspear Rocket Pod" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-stormspear-seg-tm-knight-styrix-sty-cara-inline" name="Stormspear Rocket Pod" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-styrix-sty-cara-inline-knight-cara-icarus" name="Icarus Autocannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-icarus-seg-tm-knight-styrix-sty-cara-inline" name="Icarus Autocannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Skyfire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -3097,15 +3415,35 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-errax-errax-melee" name="Combat Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-errax-cutter">
+        <selectionEntryGroup id="seg-tm-errax-errax-melee" name="Combat Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-errax-errax-melee-inline-errax-cutter">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-errax-errax-melee" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-errax-errax-melee" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-errax-errax-melee-opt-tm-errax-cutter" name="Errax Lascutter (default)" targetId="se-opt-tm-errax-cutter" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-errax-errax-melee-opt-tm-errax-melta" name="Errax Meltagun" targetId="se-opt-tm-errax-melta" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-errax-errax-melee-inline-errax-cutter" name="Errax Lascutter (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-errax-cutter-seg-tm-errax-errax-melee-inline" name="Errax Lascutter" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rending</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-errax-errax-melee-inline-errax-melta" name="Errax Meltagun" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-errax-melta-seg-tm-errax-errax-melee-inline" name="Errax Meltagun" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -3129,15 +3467,35 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-tenebrax-tene-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-tene-cannon">
+        <selectionEntryGroup id="seg-tm-tenebrax-tene-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-tenebrax-tene-primary-inline-tene-cannon">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-tenebrax-tene-primary" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-tenebrax-tene-primary" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-tenebrax-tene-primary-opt-tm-tene-cannon" name="Exo-Planar Cannon (default)" targetId="se-opt-tm-tene-cannon" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-tenebrax-tene-primary-opt-tm-tene-bolters" name="Stalker Maxima Bolters (Heavy)" targetId="se-opt-tm-tene-bolters" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-tenebrax-tene-primary-inline-tene-cannon" name="Exo-Planar Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-tene-cannon-seg-tm-tenebrax-tene-primary-inline" name="Exo-Planar Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-tenebrax-tene-primary-inline-tene-bolters" name="Stalker Maxima Bolters (Heavy)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-tene-bolters-seg-tm-tenebrax-tene-primary-inline" name="Stalker Maxima Bolters" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -3167,15 +3525,35 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-scintillax-scin-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-scin-cannon">
+        <selectionEntryGroup id="seg-tm-scintillax-scin-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-scintillax-scin-primary-inline-scin-cannon">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-scintillax-scin-primary" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-scintillax-scin-primary" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-scintillax-scin-primary-opt-tm-scin-cannon" name="Exo-Planar Cannon (default)" targetId="se-opt-tm-scin-cannon" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-scintillax-scin-primary-opt-tm-scin-laser" name="Storm Laser" targetId="se-opt-tm-scin-laser" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-scintillax-scin-primary-inline-scin-cannon" name="Exo-Planar Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-scin-cannon-seg-tm-scintillax-scin-primary-inline" name="Exo-Planar Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-scintillax-scin-primary-inline-scin-laser" name="Storm Laser" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-scin-laser-seg-tm-scintillax-scin-primary-inline" name="Storm Laser" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">7"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -3205,25 +3583,65 @@
         </characteristics></profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="seg-tm-serperos-serp-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-serp-bombard">
+        <selectionEntryGroup id="seg-tm-serperos-serp-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-serperos-serp-primary-inline-serp-bombard">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-serperos-serp-primary" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-serperos-serp-primary" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-serperos-serp-primary-opt-tm-serp-bombard" name="Exo-Planar Bombard (default)" targetId="se-opt-tm-serp-bombard" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-serperos-serp-primary-opt-tm-serp-laser" name="Storm Laser Array" targetId="se-opt-tm-serp-laser" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-serperos-serp-primary-inline-serp-bombard" name="Exo-Planar Bombard (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-serp-bombard-seg-tm-serperos-serp-primary-inline" name="Exo-Planar Bombard" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">10"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast, Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-serperos-serp-primary-inline-serp-laser" name="Storm Laser Array" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-serp-laser-seg-tm-serperos-serp-primary-inline" name="Storm Laser Array" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Rapid Fire, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="seg-tm-serperos-serp-melee" name="Melee/Aux Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-serp-cutter">
+        <selectionEntryGroup id="seg-tm-serperos-serp-melee" name="Melee/Aux Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-serperos-serp-melee-inline-serp-cutter">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-serperos-serp-melee" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-serperos-serp-melee" type="max"/>
           </constraints>
-          <entryLinks>
-            <entryLink id="el-seg-tm-serperos-serp-melee-opt-tm-serp-cutter" name="Serperos Lascutters (default)" targetId="se-opt-tm-serp-cutter" type="selectionEntry" hidden="false"/>
-            <entryLink id="el-seg-tm-serperos-serp-melee-opt-tm-serp-irrad" name="Irradiation Engine" targetId="se-opt-tm-serp-irrad" type="selectionEntry" hidden="false"/>
-          </entryLinks>
+          <selectionEntries>
+          <selectionEntry id="se-seg-tm-serperos-serp-melee-inline-serp-cutter" name="Serperos Lascutters (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-serp-cutter-seg-tm-serperos-serp-melee-inline" name="Serperos Lascutters" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-serperos-serp-melee-inline-serp-irrad" name="Irradiation Engine" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-serp-irrad-seg-tm-serperos-serp-melee-inline" name="Irradiation Engine" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Template, Poison 2+, Ignores Cover</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9381,32 +9799,82 @@
         <infoLink id="il-tm-archmagos-1" name="Cortex Controller" targetId="note-tm-archmagos-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-archmagos-hq-ranged" name="Archmagos Weapon Array" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-arch-array">
+      <selectionEntryGroup id="seg-tm-archmagos-hq-ranged" name="Archmagos Weapon Array" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-archmagos-hq-ranged-inline-arch-array">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-archmagos-hq-ranged" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-archmagos-hq-ranged" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-archmagos-hq-ranged-opt-tm-arch-array" name="Archmagos Weapons Array (default)" targetId="se-opt-tm-arch-array" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-archmagos-hq-ranged-opt-tm-abeyant" name="Abeyant Weapons Mount" targetId="se-opt-tm-abeyant" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-archmagos-hq-ranged-inline-arch-array" name="Archmagos Weapons Array (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-arch-array-seg-tm-archmagos-hq-ranged-inline" name="Archmagos Weapons Array" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-archmagos-hq-ranged-inline-abeyant" name="Abeyant Weapons Mount" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="15"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-abeyant-seg-tm-archmagos-hq-ranged-inline" name="Abeyant Weapons Mount" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-archmagos-hq-melee" name="Mechadendrite Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-mech-mace">
+      <selectionEntryGroup id="seg-tm-archmagos-hq-melee" name="Mechadendrite Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-archmagos-hq-melee-inline-mech-mace">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-archmagos-hq-melee" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-archmagos-hq-melee" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-archmagos-hq-melee-opt-tm-mech-mace" name="Mechadendrites + Power Mace (default)" targetId="se-opt-tm-mech-mace" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-archmagos-hq-melee-opt-tm-paragon-mech" name="Master-Crafted Mechadendrites" targetId="se-opt-tm-paragon-mech" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-archmagos-hq-melee-opt-tm-servo-claw" name="Servo-Claw" targetId="se-opt-tm-servo-claw" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-archmagos-hq-melee-inline-mech-mace" name="Mechadendrites + Power Mace (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-mech-mace-seg-tm-archmagos-hq-melee-inline" name="Mechadendrites + Power Mace" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">+1 Atk</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-archmagos-hq-melee-inline-paragon-mech" name="Master-Crafted Mechadendrites" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-paragon-mech-seg-tm-archmagos-hq-melee-inline" name="Master-Crafted Mechadendrites" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Master-crafted, +2 Atk</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-archmagos-hq-melee-inline-servo-claw" name="Servo-Claw" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-servo-claw-seg-tm-archmagos-hq-melee-inline" name="Servo-Claw" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-tm-thallax" name="Thallax Cohort" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-tm-thallax" targetId="cat-troops" primary="true"/></categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="35"/></costs>
+      <costs><cost name="pts" typeId="pts" value="40"/></costs>
       <profiles>
         <profile id="p-tm-thallax" name="Thallax Cohort" typeId="pt-unit"><characteristics>
           <characteristic name="Mv" typeId="ct-mv">2"</characteristic>
@@ -9429,16 +9897,46 @@
         <infoLink id="il-tm-thallax-2" name="Cybernetica Cortex" targetId="note-tm-thallax-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-thallax-squad-loadout" name="Squad Special Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-thallax-light">
+      <selectionEntryGroup id="seg-tm-thallax-squad-loadout" name="Squad Special Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-thallax-squad-loadout-inline-thallax-light">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-thallax-squad-loadout" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-thallax-squad-loadout" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-thallax-squad-loadout-opt-tm-thallax-light" name="Lightning Guns (default)" targetId="se-opt-tm-thallax-light" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-thallax-squad-loadout-opt-tm-thallax-multi" name="Multi-Meltas" targetId="se-opt-tm-thallax-multi" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-thallax-squad-loadout-opt-tm-thallax-photon" name="Photon Thrusters" targetId="se-opt-tm-thallax-photon" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-thallax-squad-loadout-inline-thallax-light" name="Lightning Guns (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-thallax-light-seg-tm-thallax-squad-loadout-inline" name="Lightning Guns" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Rending</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-thallax-squad-loadout-inline-thallax-multi" name="Multi-Meltas" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-thallax-multi-seg-tm-thallax-squad-loadout-inline" name="Multi-Meltas" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-thallax-squad-loadout-inline-thallax-photon" name="Photon Thrusters" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-thallax-photon-seg-tm-thallax-squad-loadout-inline" name="Photon Thrusters" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Gets Hot</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9467,33 +9965,93 @@
         <infoLink id="il-tm-castellax-2" name="Fearless" targetId="note-tm-castellax-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-castellax-cast-ranged" name="Ranged Armament" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-cast-mauler">
+      <selectionEntryGroup id="seg-tm-castellax-cast-ranged" name="Ranged Armament" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-castellax-cast-ranged-inline-cast-mauler">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-castellax-cast-ranged" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-castellax-cast-ranged" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-castellax-cast-ranged-opt-tm-cast-mauler" name="Mauler Bolt Cannon (default)" targetId="se-opt-tm-cast-mauler" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-castellax-cast-ranged-opt-tm-cast-darkfire" name="Darkfire Cannons" targetId="se-opt-tm-cast-darkfire" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-castellax-cast-ranged-opt-tm-cast-multi" name="Multi-Meltas" targetId="se-opt-tm-cast-multi" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-castellax-cast-ranged-opt-tm-cast-flamer" name="Flamer Cannons" targetId="se-opt-tm-cast-flamer" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-castellax-cast-ranged-inline-cast-mauler" name="Mauler Bolt Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cast-mauler-seg-tm-castellax-cast-ranged-inline" name="Mauler Bolt Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-castellax-cast-ranged-inline-cast-darkfire" name="Darkfire Cannons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cast-darkfire-seg-tm-castellax-cast-ranged-inline" name="Darkfire Cannons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">7"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-castellax-cast-ranged-inline-cast-multi" name="Multi-Meltas" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cast-multi-seg-tm-castellax-cast-ranged-inline" name="Multi-Meltas" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Melta, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-castellax-cast-ranged-inline-cast-flamer" name="Flamer Cannons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cast-flamer-seg-tm-castellax-cast-ranged-inline" name="Flamer Cannons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">3"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Template, Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-castellax-cast-melee" name="Close Combat Armament" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-cast-fist">
+      <selectionEntryGroup id="seg-tm-castellax-cast-melee" name="Close Combat Armament" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-castellax-cast-melee-inline-cast-fist">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-castellax-cast-melee" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-castellax-cast-melee" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-castellax-cast-melee-opt-tm-cast-fist" name="Power Fist (default)" targetId="se-opt-tm-cast-fist" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-castellax-cast-melee-opt-tm-cast-hammer" name="Siege Wrecker" targetId="se-opt-tm-cast-hammer" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-castellax-cast-melee-inline-cast-fist" name="Power Fist (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cast-fist-seg-tm-castellax-cast-melee-inline" name="Power Fist" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">—</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-castellax-cast-melee-inline-cast-hammer" name="Siege Wrecker" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cast-hammer-seg-tm-castellax-cast-melee-inline" name="Siege Wrecker" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal, Concussive</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-tm-vorax" name="Vorax Battle-Automata" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-tm-vorax" targetId="cat-fast" primary="true"/></categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="40"/></costs>
+      <costs><cost name="pts" typeId="pts" value="50"/></costs>
       <profiles>
         <profile id="p-tm-vorax" name="Vorax Battle-Automata" typeId="pt-unit"><characteristics>
           <characteristic name="Mv" typeId="ct-mv">3"</characteristic>
@@ -9515,21 +10073,41 @@
         <infoLink id="il-tm-vorax-1" name="Fearless" targetId="note-tm-vorax-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-vorax-vor-ranged" name="Ranged Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-vorax-rotor">
+      <selectionEntryGroup id="seg-tm-vorax-vor-ranged" name="Ranged Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-vorax-vor-ranged-inline-vorax-rotor">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-vorax-vor-ranged" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-vorax-vor-ranged" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-vorax-vor-ranged-opt-tm-vorax-rotor" name="Rotor Cannon (default)" targetId="se-opt-tm-vorax-rotor" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-vorax-vor-ranged-opt-tm-vorax-light" name="Lightning Guns" targetId="se-opt-tm-vorax-light" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-vorax-vor-ranged-inline-vorax-rotor" name="Rotor Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-vorax-rotor-seg-tm-vorax-vor-ranged-inline" name="Rotor Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Rapid Fire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-vorax-vor-ranged-inline-vorax-light" name="Lightning Guns" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-vorax-light-seg-tm-vorax-vor-ranged-inline" name="Lightning Guns" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Rending</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-tm-thanatar" name="Thanatar Siege-Automata" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-tm-thanatar" targetId="cat-heavy" primary="true"/></categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="70"/></costs>
+      <costs><cost name="pts" typeId="pts" value="75"/></costs>
       <profiles>
         <profile id="p-tm-thanatar" name="Thanatar Siege-Automata" typeId="pt-unit"><characteristics>
           <characteristic name="Mv" typeId="ct-mv">1"</characteristic>
@@ -9552,22 +10130,52 @@
         <infoLink id="il-tm-thanatar-2" name="Fearless" targetId="note-tm-thanatar-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-thanatar-than-loadout" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-than-hellex">
+      <selectionEntryGroup id="seg-tm-thanatar-than-loadout" name="Primary Cannon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-thanatar-than-loadout-inline-than-hellex">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-thanatar-than-loadout" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-thanatar-than-loadout" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-thanatar-than-loadout-opt-tm-than-hellex" name="Hellex Plasma Mortar (default)" targetId="se-opt-tm-than-hellex" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-thanatar-than-loadout-opt-tm-than-sollex" name="Sollex Lascannon Variant" targetId="se-opt-tm-than-sollex" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-thanatar-than-loadout-opt-tm-than-cyclops" name="Cyclothrathic Cannon Variant" targetId="se-opt-tm-than-cyclops" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-thanatar-than-loadout-inline-than-hellex" name="Hellex Plasma Mortar (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-than-hellex-seg-tm-thanatar-than-loadout-inline" name="Hellex Plasma Mortar" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Barrage, Blast, Brutal, Gets Hot</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-thanatar-than-loadout-inline-than-sollex" name="Sollex Lascannon Variant" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-than-sollex-seg-tm-thanatar-than-loadout-inline" name="Sollex Lascannon Variant" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">9"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Twin-linked, Exoshock</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-thanatar-than-loadout-inline-than-cyclops" name="Cyclothrathic Cannon Variant" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-than-cyclops-seg-tm-thanatar-than-loadout-inline" name="Cyclothrathic Cannon Variant" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Exoshock, Sunder</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-tm-domitar" name="Domitar Battle-Automata" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-tm-domitar" targetId="cat-elites" primary="true"/></categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="50"/></costs>
+      <costs><cost name="pts" typeId="pts" value="55"/></costs>
       <profiles>
         <profile id="p-tm-domitar" name="Domitar Battle-Automata" typeId="pt-unit"><characteristics>
           <characteristic name="Mv" typeId="ct-mv">2"</characteristic>
@@ -9590,21 +10198,41 @@
         <infoLink id="il-tm-domitar-2" name="Fearless" targetId="note-tm-domitar-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-domitar-dom-loadout" name="Combat Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-dom-grav">
+      <selectionEntryGroup id="seg-tm-domitar-dom-loadout" name="Combat Loadout" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-domitar-dom-loadout-inline-dom-grav">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-domitar-dom-loadout" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-domitar-dom-loadout" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-domitar-dom-loadout-opt-tm-dom-grav" name="Graviton Hammer + Missile (default)" targetId="se-opt-tm-dom-grav" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-domitar-dom-loadout-opt-tm-dom-fist" name="Power Fists Pair" targetId="se-opt-tm-dom-fist" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-domitar-dom-loadout-inline-dom-grav" name="Graviton Hammer + Missile (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-dom-grav-seg-tm-domitar-dom-loadout-inline" name="Graviton Hammer + Missile" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Concussive, Blast (M); 8" missile (R)</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-domitar-dom-loadout-inline-dom-fist" name="Power Fists Pair" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-dom-fist-seg-tm-domitar-dom-loadout-inline" name="Power Fists Pair" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">+1 Atk</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="se-tm-krios" name="Krios Battle Tank" hidden="false" collective="false" type="unit">
       <categoryLinks><categoryLink id="cl-tm-krios" targetId="cat-heavy" primary="true"/></categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="45"/></costs>
+      <costs><cost name="pts" typeId="pts" value="55"/></costs>
       <profiles>
         <profile id="p-tm-krios" name="Krios Battle Tank" typeId="pt-unit"><characteristics>
           <characteristic name="Mv" typeId="ct-mv">2.5"</characteristic>
@@ -9625,26 +10253,68 @@
         <infoLink id="il-tm-krios-0" name="Vehicle" targetId="note-tm-krios-0" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-krios-krios-loadout" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-krios-light">
+      <selectionEntryGroup id="seg-tm-krios-krios-loadout" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-krios-krios-loadout-inline-krios-light">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-krios-krios-loadout" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-krios-krios-loadout" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-krios-krios-loadout-opt-tm-krios-light" name="Lightning Cannon (default)" targetId="se-opt-tm-krios-light" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-krios-krios-loadout-opt-tm-krios-pulsar" name="Pulsar-Fusil (Venator)" targetId="se-opt-tm-krios-pulsar" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-krios-krios-loadout-inline-krios-light" name="Lightning Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-krios-light-seg-tm-krios-krios-loadout-inline" name="Lightning Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">6"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-krios-krios-loadout-inline-krios-pulsar" name="Pulsar-Fusil (Venator)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-krios-pulsar-seg-tm-krios-krios-loadout-inline" name="Pulsar-Fusil" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Lance</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-krios-pintle" name="Pintle" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-pintle-none">
+      <selectionEntryGroup id="seg-tm-krios-pintle" name="Pintle" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-krios-pintle-inline-pintle-none">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-krios-pintle" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-krios-pintle" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-krios-pintle-opt-tm-pintle-none" name="No Pintle (default)" targetId="se-opt-tm-pintle-none" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-krios-pintle-opt-tm-pintle-bolter" name="Pintle Storm Bolter" targetId="se-opt-tm-pintle-bolter" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-krios-pintle-opt-tm-pintle-volk" name="Pintle Volkite Sentinel" targetId="se-opt-tm-pintle-volk" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-krios-pintle-inline-pintle-none" name="No Pintle (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-krios-pintle-inline-pintle-bolter" name="Pintle Storm Bolter" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-pintle-bolter-seg-tm-krios-pintle-inline" name="Pintle Storm Bolter" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">4+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Rapid Fire, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-krios-pintle-inline-pintle-volk" name="Pintle Volkite Sentinel" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-pintle-volk-seg-tm-krios-pintle-inline" name="Pintle Volkite Sentinel" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Deflagrate</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9672,14 +10342,24 @@
         <infoLink id="il-tm-triaros-1" name="Transport" targetId="note-tm-triaros-1" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-triaros-tri-pintle" name="Hull Sentinel Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-tri-volkite">
+      <selectionEntryGroup id="seg-tm-triaros-tri-pintle" name="Hull Sentinel Weapons" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-triaros-tri-pintle-inline-tri-volkite">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-triaros-tri-pintle" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-triaros-tri-pintle" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-triaros-tri-pintle-opt-tm-tri-volkite" name="Volkite Sentinels (default)" targetId="se-opt-tm-tri-volkite" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-triaros-tri-pintle-inline-tri-volkite" name="Volkite Sentinels (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-tri-volkite-seg-tm-triaros-tri-pintle-inline" name="Volkite Sentinels" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">4"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">0</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Assault, Deflagrate</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9714,36 +10394,98 @@
         <infoLink id="il-tm-knight-errant-2" name="Ion Shield 4+" targetId="note-tm-knight-errant-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-knight-errant-knight-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-kerr-thermal">
+      <selectionEntryGroup id="seg-tm-knight-errant-knight-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-errant-knight-primary-inline-kerr-thermal">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-errant-knight-primary" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-errant-knight-primary" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-errant-knight-primary-opt-tm-kerr-thermal" name="Thermal Cannon (default)" targetId="se-opt-tm-kerr-thermal" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-errant-knight-primary-opt-tm-kerr-rapidfire" name="Rapid-Fire Battle Cannon" targetId="se-opt-tm-kerr-rapidfire" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-errant-knight-primary-inline-kerr-thermal" name="Thermal Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kerr-thermal-seg-tm-knight-errant-knight-primary-inline" name="Thermal Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Melta, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-errant-knight-primary-inline-kerr-rapidfire" name="Rapid-Fire Battle Cannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kerr-rapidfire-seg-tm-knight-errant-knight-primary-inline" name="Rapid-Fire Battle Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">10"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-knight-errant-knight-melee" name="Reaper Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-kerr-chain">
+      <selectionEntryGroup id="seg-tm-knight-errant-knight-melee" name="Reaper Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-errant-knight-melee-inline-kerr-chain">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-errant-knight-melee" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-errant-knight-melee" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-errant-knight-melee-opt-tm-kerr-chain" name="Reaper Chainsword (default)" targetId="se-opt-tm-kerr-chain" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-errant-knight-melee-opt-tm-kerr-fist" name="Thunderstrike Gauntlet" targetId="se-opt-tm-kerr-fist" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-errant-knight-melee-inline-kerr-chain" name="Reaper Chainsword (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kerr-chain-seg-tm-knight-errant-knight-melee-inline" name="Reaper Chainsword" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-errant-knight-melee-inline-kerr-fist" name="Thunderstrike Gauntlet" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kerr-fist-seg-tm-knight-errant-knight-melee-inline" name="Thunderstrike Gauntlet" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal, Concussive</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-knight-errant-knight-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-knight-cara-none">
+      <selectionEntryGroup id="seg-tm-knight-errant-knight-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-errant-knight-cara-inline-knight-cara-none">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-errant-knight-cara" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-errant-knight-cara" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-errant-knight-cara-opt-tm-knight-cara-none" name="No Carapace (default)" targetId="se-opt-tm-knight-cara-none" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-errant-knight-cara-opt-tm-knight-cara-stormspear" name="Stormspear Rocket Pod" targetId="se-opt-tm-knight-cara-stormspear" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-errant-knight-cara-opt-tm-knight-cara-icarus" name="Icarus Autocannon" targetId="se-opt-tm-knight-cara-icarus" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-errant-knight-cara-inline-knight-cara-none" name="No Carapace (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-errant-knight-cara-inline-knight-cara-stormspear" name="Stormspear Rocket Pod" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-stormspear-seg-tm-knight-errant-knight-cara-inline" name="Stormspear Rocket Pod" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-errant-knight-cara-inline-knight-cara-icarus" name="Icarus Autocannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-icarus-seg-tm-knight-errant-knight-cara-inline" name="Icarus Autocannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Skyfire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9778,36 +10520,98 @@
         <infoLink id="il-tm-knight-paladin-2" name="Ion Shield 4+" targetId="note-tm-knight-paladin-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-knight-paladin-knight-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-kpal-rapidfire">
+      <selectionEntryGroup id="seg-tm-knight-paladin-knight-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-paladin-knight-primary-inline-kpal-rapidfire">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-paladin-knight-primary" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-paladin-knight-primary" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-paladin-knight-primary-opt-tm-kpal-rapidfire" name="Rapid-Fire Battle Cannon (default)" targetId="se-opt-tm-kpal-rapidfire" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-paladin-knight-primary-opt-tm-kpal-thermal" name="Thermal Cannon" targetId="se-opt-tm-kpal-thermal" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-paladin-knight-primary-inline-kpal-rapidfire" name="Rapid-Fire Battle Cannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kpal-rapidfire-seg-tm-knight-paladin-knight-primary-inline" name="Rapid-Fire Battle Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">10"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-paladin-knight-primary-inline-kpal-thermal" name="Thermal Cannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kpal-thermal-seg-tm-knight-paladin-knight-primary-inline" name="Thermal Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Melta, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-knight-paladin-knight-melee" name="Reaper Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-kerr-chain">
+      <selectionEntryGroup id="seg-tm-knight-paladin-knight-melee" name="Reaper Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-paladin-knight-melee-inline-kerr-chain">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-paladin-knight-melee" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-paladin-knight-melee" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-paladin-knight-melee-opt-tm-kerr-chain" name="Reaper Chainsword (default)" targetId="se-opt-tm-kerr-chain" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-paladin-knight-melee-opt-tm-kerr-fist" name="Thunderstrike Gauntlet" targetId="se-opt-tm-kerr-fist" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-paladin-knight-melee-inline-kerr-chain" name="Reaper Chainsword (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kerr-chain-seg-tm-knight-paladin-knight-melee-inline" name="Reaper Chainsword" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-paladin-knight-melee-inline-kerr-fist" name="Thunderstrike Gauntlet" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-kerr-fist-seg-tm-knight-paladin-knight-melee-inline" name="Thunderstrike Gauntlet" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal, Concussive</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-knight-paladin-knight-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-knight-cara-none">
+      <selectionEntryGroup id="seg-tm-knight-paladin-knight-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-paladin-knight-cara-inline-knight-cara-none">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-paladin-knight-cara" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-paladin-knight-cara" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-paladin-knight-cara-opt-tm-knight-cara-none" name="No Carapace (default)" targetId="se-opt-tm-knight-cara-none" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-paladin-knight-cara-opt-tm-knight-cara-stormspear" name="Stormspear Rocket Pod" targetId="se-opt-tm-knight-cara-stormspear" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-paladin-knight-cara-opt-tm-knight-cara-icarus" name="Icarus Autocannon" targetId="se-opt-tm-knight-cara-icarus" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-paladin-knight-cara-inline-knight-cara-none" name="No Carapace (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-paladin-knight-cara-inline-knight-cara-stormspear" name="Stormspear Rocket Pod" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-stormspear-seg-tm-knight-paladin-knight-cara-inline" name="Stormspear Rocket Pod" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-2</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Blast</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-paladin-knight-cara-inline-knight-cara-icarus" name="Icarus Autocannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-knight-cara-icarus-seg-tm-knight-paladin-knight-cara-inline" name="Icarus Autocannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Skyfire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9836,14 +10640,24 @@
         <infoLink id="il-tm-knight-lancer-2" name="Ion Shield 3+" targetId="note-tm-knight-lancer-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-knight-lancer-knight-stomp" name="Stomp Attack" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-cer-stomp">
+      <selectionEntryGroup id="seg-tm-knight-lancer-knight-stomp" name="Stomp Attack" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-lancer-knight-stomp-inline-cer-stomp">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-lancer-knight-stomp" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-lancer-knight-stomp" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-lancer-knight-stomp-opt-tm-cer-stomp" name="Cerastus Stomp (default)" targetId="se-opt-tm-cer-stomp" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-lancer-knight-stomp-inline-cer-stomp" name="Cerastus Stomp (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cer-stomp-seg-tm-knight-lancer-knight-stomp-inline" name="Cerastus Stomp" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal, +D3 hits on charge</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9872,14 +10686,24 @@
         <infoLink id="il-tm-knight-atrapos-2" name="Ion Shield 3+" targetId="note-tm-knight-atrapos-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-knight-atrapos-knight-stomp" name="Stomp Attack" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-cer-stomp">
+      <selectionEntryGroup id="seg-tm-knight-atrapos-knight-stomp" name="Stomp Attack" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-atrapos-knight-stomp-inline-cer-stomp">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-atrapos-knight-stomp" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-atrapos-knight-stomp" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-atrapos-knight-stomp-opt-tm-cer-stomp" name="Cerastus Stomp (default)" targetId="se-opt-tm-cer-stomp" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-atrapos-knight-stomp-inline-cer-stomp" name="Cerastus Stomp (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-cer-stomp-seg-tm-knight-atrapos-knight-stomp-inline" name="Cerastus Stomp" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">Melee</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Brutal, +D3 hits on charge</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9908,24 +10732,46 @@
         <infoLink id="il-tm-knight-porphyrion-2" name="Ion Shield 4+" targetId="note-tm-knight-porphyrion-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-knight-porphyrion-porph-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-porph-las">
+      <selectionEntryGroup id="seg-tm-knight-porphyrion-porph-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-porphyrion-porph-primary-inline-porph-las">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-porphyrion-porph-primary" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-porphyrion-porph-primary" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-porphyrion-porph-primary-opt-tm-porph-las" name="Twin Magna Lascannon (default)" targetId="se-opt-tm-porph-las" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-porphyrion-porph-primary-inline-porph-las" name="Twin Magna Lascannon (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-porph-las-seg-tm-knight-porphyrion-porph-primary-inline" name="Twin Magna Lascannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">12"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Twin-linked</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-knight-porphyrion-porph-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-porph-cara-none">
+      <selectionEntryGroup id="seg-tm-knight-porphyrion-porph-cara" name="Carapace Mount" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-porphyrion-porph-cara-inline-porph-cara-none">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-porphyrion-porph-cara" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-porphyrion-porph-cara" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-porphyrion-porph-cara-opt-tm-porph-cara-none" name="No Helios Defence (default)" targetId="se-opt-tm-porph-cara-none" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-porphyrion-porph-cara-opt-tm-porph-cara-helios" name="Helios Defence Missiles" targetId="se-opt-tm-porph-cara-helios" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-porphyrion-porph-cara-inline-porph-cara-none" name="No Helios Defence (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-porphyrion-porph-cara-inline-porph-cara-helios" name="Helios Defence Missiles" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="10"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-porph-cara-helios-seg-tm-knight-porphyrion-porph-cara-inline" name="Helios Defence Missiles" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Skyfire</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9954,15 +10800,35 @@
         <infoLink id="il-tm-knight-moirax-2" name="Flare Shield" targetId="note-tm-knight-moirax-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-knight-moirax-moir-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-moir-light">
+      <selectionEntryGroup id="seg-tm-knight-moirax-moir-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-knight-moirax-moir-primary-inline-moir-light">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-knight-moirax-moir-primary" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-knight-moirax-moir-primary" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-knight-moirax-moir-primary-opt-tm-moir-light" name="Lightning Lock (default)" targetId="se-opt-tm-moir-light" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-knight-moirax-moir-primary-opt-tm-moir-conv" name="Conversion Beam Cannon" targetId="se-opt-tm-moir-conv" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-knight-moirax-moir-primary-inline-moir-light" name="Lightning Lock (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-moir-light-seg-tm-knight-moirax-moir-primary-inline" name="Lightning Lock" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">5"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-knight-moirax-moir-primary-inline-moir-conv" name="Conversion Beam Cannon" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="5"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-moir-conv-seg-tm-knight-moirax-moir-primary-inline" name="Conversion Beam Cannon" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">8"</characteristic>
+          <characteristic name="W" typeId="cw-w">3+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-1</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Variable</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -9991,24 +10857,46 @@
         <infoLink id="il-tm-ordinatus-2" name="Void Shield 2" targetId="note-tm-ordinatus-2" type="rule"/>
       </infoLinks></infoGroup></infoGroups>
           <selectionEntryGroups>
-      <selectionEntryGroup id="seg-tm-ordinatus-ord-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-ord-sonic">
+      <selectionEntryGroup id="seg-tm-ordinatus-ord-primary" name="Primary Weapon" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-ordinatus-ord-primary-inline-ord-sonic">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-ordinatus-ord-primary" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-ordinatus-ord-primary" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-ordinatus-ord-primary-opt-tm-ord-sonic" name="Sonic Destructor (default)" targetId="se-opt-tm-ord-sonic" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-ordinatus-ord-primary-inline-ord-sonic" name="Sonic Destructor (default)" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-ord-sonic-seg-tm-ordinatus-ord-primary-inline" name="Sonic Destructor" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">14"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-4</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy, Brutal, Concussive</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
-      <selectionEntryGroup id="seg-tm-ordinatus-ord-sponsons" name="Defence Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-opt-tm-ord-sponsons-none">
+      <selectionEntryGroup id="seg-tm-ordinatus-ord-sponsons" name="Defence Sponsons" hidden="false" collective="false" defaultSelectionEntryId="se-seg-tm-ordinatus-ord-sponsons-inline-ord-sponsons-none">
         <constraints>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-seg-tm-ordinatus-ord-sponsons" type="min"/>
           <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-seg-tm-ordinatus-ord-sponsons" type="max"/>
         </constraints>
-        <entryLinks>
-          <entryLink id="el-seg-tm-ordinatus-ord-sponsons-opt-tm-ord-sponsons-none" name="No Sponsons" targetId="se-opt-tm-ord-sponsons-none" type="selectionEntry" hidden="false"/>
-          <entryLink id="el-seg-tm-ordinatus-ord-sponsons-opt-tm-ord-sponsons-las" name="Defence Lascannons" targetId="se-opt-tm-ord-sponsons-las" type="selectionEntry" hidden="false"/>
-        </entryLinks>
+        <selectionEntries>
+          <selectionEntry id="se-seg-tm-ordinatus-ord-sponsons-inline-ord-sponsons-none" name="No Sponsons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+    </selectionEntry>
+          <selectionEntry id="se-seg-tm-ordinatus-ord-sponsons-inline-ord-sponsons-las" name="Defence Lascannons" hidden="false" collective="false" type="upgrade">
+      <costs><cost name="pts" typeId="pts" value="15"/></costs>
+      <profiles>
+        <profile id="p-opt-tm-ord-sponsons-las-seg-tm-ordinatus-ord-sponsons-inline" name="Defence Lascannons" typeId="pt-weapon"><characteristics>
+          <characteristic name="Range" typeId="cw-range">9"</characteristic>
+          <characteristic name="W" typeId="cw-w">2+/2+</characteristic>
+          <characteristic name="AP" typeId="cw-ap">-3</characteristic>
+          <characteristic name="Keywords" typeId="cw-keywords">Heavy</characteristic>
+        </characteristics></profile>
+      </profiles>
+    </selectionEntry>
+        </selectionEntries>
       </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
