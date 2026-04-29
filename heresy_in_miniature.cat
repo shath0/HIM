@@ -44,28 +44,6 @@
     <entryLink id="el-fac-talons" name="Talons of the Emperor" targetId="se-fac-talons" type="selectionEntry" hidden="false"/>
     <entryLink id="el-fac-knights" name="Questoris Household" targetId="se-fac-knights" type="selectionEntry" hidden="false"/>
     <entryLink id="el-fac-daemons" name="Daemonic Host" targetId="se-fac-daemons" type="selectionEntry" hidden="false"/>
-    <!-- Legion / Subfaction entry links -->
-    <entryLink id="el-sub-da" name="I — Dark Angels" targetId="se-sub-da" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-ec" name="III — Emperor&#x27;s Children" targetId="se-sub-ec" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-iw" name="IV — Iron Warriors" targetId="se-sub-iw" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-ws" name="V — White Scars" targetId="se-sub-ws" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-sw" name="VI — Space Wolves" targetId="se-sub-sw" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-if" name="VII — Imperial Fists" targetId="se-sub-if" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-nl" name="VIII — Night Lords" targetId="se-sub-nl" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-ba" name="IX — Blood Angels" targetId="se-sub-ba" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-ih" name="X — Iron Hands" targetId="se-sub-ih" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-we" name="XII — World Eaters" targetId="se-sub-we" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-um" name="XIII — Ultramarines" targetId="se-sub-um" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-dg" name="XIV — Death Guard" targetId="se-sub-dg" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-ts" name="XV — Thousand Sons" targetId="se-sub-ts" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-soh" name="XVI — Sons of Horus" targetId="se-sub-soh" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-wb" name="XVII — Word Bearers" targetId="se-sub-wb" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-sal" name="XVIII — Salamanders" targetId="se-sub-sal" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-rg" name="XIX — Raven Guard" targetId="se-sub-rg" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-al" name="XX — Alpha Legion" targetId="se-sub-al" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-sa" name="Solar Auxilia" targetId="se-sub-sa" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-tm" name="Mechanicum Taghmata" targetId="se-sub-tm" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-mil" name="Militia" targetId="se-sub-mil" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-cmd" name="Legion Command" targetId="se-la-cmd" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-praetor" name="Legion Praetor" targetId="se-la-praetor" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-chaplain" name="Legion Chaplain" targetId="se-la-chaplain" type="selectionEntry" hidden="false"/>
@@ -295,6 +273,7 @@
     <entryLink id="el-sub-sa" name="Solar Auxilia" targetId="se-sub-sa" type="selectionEntry" hidden="false"/>
     <entryLink id="el-sub-tm" name="Mechanicum Taghmata" targetId="se-sub-tm" type="selectionEntry" hidden="false"/>
     <entryLink id="el-sub-mil" name="Militia" targetId="se-sub-mil" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-al" name="XX — Alpha Legion" targetId="se-sub-al" type="selectionEntry" hidden="false"/>
     <entryLink id="el-boon-l-faith" name="Boon: Unshakeable Faith" targetId="se-boon-l-faith" type="selectionEntry" hidden="false"/>
     <entryLink id="el-boon-l-shield" name="Boon: Shield of Terra" targetId="se-boon-l-shield" type="selectionEntry" hidden="false"/>
     <entryLink id="el-boon-l-beacon" name="Boon: The Beacon" targetId="se-boon-l-beacon" type="selectionEntry" hidden="false"/>
@@ -6357,6 +6336,119 @@
         <infoLinks><infoLink id="il-boon-tc-longwar" name="Campaign Boon: The Long War Begins" targetId="note-boon-tc-longwar" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
+  
+    <selectionEntry id="se-fac-la-loyalist" name="Legiones Astartes — Loyalist" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-la-loy" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-la-loy-align" targetId="cat-loyalist-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-la-loy" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-la-loy-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-la-traitor" name="Legiones Astartes — Traitor" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-la-tra" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-la-tra-align" targetId="cat-traitor-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-la-tra" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-la-tra-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-sa" name="Solar Auxilia" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-sa" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-sa-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-sa" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-sa-1" name="Discipline of the Tercio. +1 Reaction per 2 Troops (max +2)." targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-tm" name="Mechanicum Taghmata" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-tm" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-tm-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-tm" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-tm-1" name="Cortex Network. Automata require Controller." targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-mil" name="Militia &amp; Cults" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-mil" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-mil-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-mil" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-mil-1" name="Strength in Numbers. Expendable. Mortal (max Sv 4+)." targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-talons" name="Talons of the Emperor" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-talons" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-talons-align" targetId="cat-loyalist-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-talons" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-talons-1" name="Null Aegis when Custodes + Sisters within 3&quot;." targetId="rule-null-aegis" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-knights" name="Questoris Household" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-knights" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-knights-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-knights" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-knights-1" name="Knight Household rules apply. Seneschal required as HQ." targetId="rule-commander" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-daemons" name="Daemonic Host" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-daemons" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-daemons-align" targetId="cat-traitor-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-daemons" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-daemons-1" name="Daemon special rules apply. Instability at end of round." targetId="rule-daemon" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule id="note-la-cmd-0" name="Commander" hidden="false"/>
@@ -7086,119 +7178,6 @@
        Pick exactly one Faction entry per roster. These live in the
        cat-faction category so they always appear first in the UI.
   ════════════════════════════════════════════════════════════════════ -->
-  <sharedSelectionEntries>
-    <selectionEntry id="se-fac-la-loyalist" name="Legiones Astartes — Loyalist" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-la-loy" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-la-loy-align" targetId="cat-loyalist-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-la-loy" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-la-loy-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-la-traitor" name="Legiones Astartes — Traitor" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-la-tra" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-la-tra-align" targetId="cat-traitor-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-la-tra" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-la-tra-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-sa" name="Solar Auxilia" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-sa" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-sa-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-sa" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-sa-1" name="Discipline of the Tercio. +1 Reaction per 2 Troops (max +2)." targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-tm" name="Mechanicum Taghmata" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-tm" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-tm-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-tm" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-tm-1" name="Cortex Network. Automata require Controller." targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-mil" name="Militia &amp; Cults" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-mil" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-mil-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-mil" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-mil-1" name="Strength in Numbers. Expendable. Mortal (max Sv 4+)." targetId="rule-line" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-talons" name="Talons of the Emperor" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-talons" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-talons-align" targetId="cat-loyalist-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-talons" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-talons-1" name="Null Aegis when Custodes + Sisters within 3&quot;." targetId="rule-null-aegis" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-knights" name="Questoris Household" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-knights" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-knights-align" targetId="cat-either-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-knights" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-knights-1" name="Knight Household rules apply. Seneschal required as HQ." targetId="rule-commander" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="se-fac-daemons" name="Daemonic Host" hidden="false" collective="false" type="upgrade">
-      <categoryLinks>
-        <categoryLink id="cl-fac-daemons" targetId="cat-faction" primary="true"/>
-        <categoryLink id="cl-fac-daemons-align" targetId="cat-traitor-sub" primary="false"/>
-      </categoryLinks>
-      <costs><cost name="pts" typeId="pts" value="0"/></costs>
-      <infoGroups>
-        <infoGroup id="ig-fac-daemons" name="Faction Rules">
-          <infoLinks>
-            <infoLink id="il-fac-daemons-1" name="Daemon special rules apply. Instability at end of round." targetId="rule-daemon" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
-    </selectionEntry>
-  </sharedSelectionEntries>
+  
 
 </catalogue>
