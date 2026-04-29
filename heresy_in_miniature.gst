@@ -37,6 +37,11 @@
     <categoryEntry id="cat-subfaction" name="Subfaction" hidden="true"/>
     <categoryEntry id="cat-faction" name="Faction" hidden="true"/>
     <categoryEntry id="cat-legion" name="Legion" hidden="true"/>
+
+    <!-- Sub-faction marker categories -->
+    <categoryEntry id="cat-prov" name="◆ Provenance of War" hidden="false"/>
+    <categoryEntry id="cat-cohort" name="◆ Cohort Identity" hidden="false"/>
+    <categoryEntry id="cat-forge" name="◆ Forge World" hidden="false"/>
   </categoryEntries>
 
   <forceEntries>
@@ -5365,6 +5370,12 @@
       <categoryLink id="cl-force-leg-al-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-auxilia" name="Solar Auxilia Tercio" hidden="false"><categoryLinks>
+      <categoryLink id="cl-force-auxilia-cat-cohort" name="◆ Cohort Identity" targetId="cat-cohort" primary="false">
+        <constraints>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-auxilia-cat-cohort" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-auxilia-cat-cohort" type="max"/>
+        </constraints>
+      </categoryLink>
       <categoryLink id="cl-force-auxilia-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-auxilia-det" type="min"/>
@@ -5633,6 +5644,12 @@
       <categoryLink id="cl-force-auxilia-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-mech" name="Mechanicum Taghmata" hidden="false"><categoryLinks>
+      <categoryLink id="cl-force-mech-cat-forge" name="◆ Forge World" targetId="cat-forge" primary="false">
+        <constraints>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-mech-cat-forge" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-mech-cat-forge" type="max"/>
+        </constraints>
+      </categoryLink>
       <categoryLink id="cl-force-mech-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-mech-det" type="min"/>
@@ -5901,6 +5918,12 @@
       <categoryLink id="cl-force-mech-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-militia" name="Militia &amp; Cults" hidden="false"><categoryLinks>
+      <categoryLink id="cl-force-militia-cat-prov" name="◆ Provenance of War" targetId="cat-prov" primary="false">
+        <constraints>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-militia-cat-prov" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-militia-cat-prov" type="max"/>
+        </constraints>
+      </categoryLink>
       <categoryLink id="cl-force-militia-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-militia-det" type="min"/>
@@ -6969,6 +6992,24 @@
       <categoryLink id="cl-force-daemons-btc" name="★ Campaign Boon — Traitor" targetId="cat-boon-t-camp" primary="false"/>
     </categoryLinks></forceEntry>
     <forceEntry id="force-open" name="Open / Mixed (Narrative Play)" hidden="false"><categoryLinks>
+      <categoryLink id="cl-force-open-cat-prov" name="◆ Provenance of War (Militia)" targetId="cat-prov" primary="false">
+        <constraints>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-open-cat-prov" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-open-cat-prov" type="max"/>
+        </constraints>
+      </categoryLink>
+      <categoryLink id="cl-force-open-cat-cohort" name="◆ Cohort Identity (Auxilia)" targetId="cat-cohort" primary="false">
+        <constraints>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-open-cat-cohort" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-open-cat-cohort" type="max"/>
+        </constraints>
+      </categoryLink>
+      <categoryLink id="cl-force-open-cat-forge" name="◆ Forge World (Mechanicum)" targetId="cat-forge" primary="false">
+        <constraints>
+          <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-open-cat-forge" type="min"/>
+          <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="max-cl-force-open-cat-forge" type="max"/>
+        </constraints>
+      </categoryLink>
       <categoryLink id="cl-force-open-det" name="◆ Detachment Type" targetId="cat-detachment" primary="true">
         <constraints>
           <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="min-cl-force-open-det" type="min"/>
@@ -7267,5 +7308,26 @@
     <rule id="rule-rite-orbital" name="Rite: Orbital Assault" hidden="false"><description>All infantry in reserve. No scatter on DS. Half deploy Round 1.</description></rule>
     <rule id="rule-rite-fury" name="Rite: Fury of the Ancients" hidden="false"><description>Dreadnoughts as Troops with Line. +1 Atk.</description></rule>
     <rule id="rule-low-cap" name="Lord of War Cap (25%)" hidden="false"><description>Lord of War selections may not exceed 25% of your total army points. Primarchs (155-180 pts) require 620+ pt games. Titans require even larger. No LoW below 500 pts.</description></rule>
+    <rule id="rule-prov-survivors" name="Survivors of the Dark Age" hidden="false"><description>+1 Ld all units. Access to advanced weapons (lasguns may upgrade to volkite for +5 pts/unit).</description></rule>
+    <rule id="rule-prov-feral" name="Feral Warriors" hidden="false"><description>+1 Atk in melee. -1 to Hit shooting. Cheap and fierce.</description></rule>
+    <rule id="rule-prov-genebred" name="Gene-bred" hidden="false"><description>+1 HP for all infantry. +5 pts per unit. Vat-grown soldiers.</description></rule>
+    <rule id="rule-prov-alchem" name="Alchem-jacketed" hidden="false"><description>+1 Save all infantry (max 3+). +5 pts per unit. Chemically enhanced.</description></rule>
+    <rule id="rule-prov-culthorde" name="Cult Horde (Traitor only)" hidden="false"><description>All units Fearless. -1 to Hit (frenzied). Traitor only.</description></rule>
+    <rule id="rule-prov-warriorelite" name="Warrior Elite" hidden="false"><description>+1 Skill all units. +5 pts per unit. Professional soldiers.</description></rule>
+    <rule id="rule-prov-tainted" name="Tainted Flesh (Traitor only)" hidden="false"><description>+1 HP, +1 Atk. -1 Ld. Traitor only. Chaos-mutated.</description></rule>
+    <rule id="rule-cohort-cthonian" name="Cthonian Headhunters" hidden="false"><description>One infantry unit may Infiltrate. +1 to Hit against the enemy&#x27;s most expensive unit.</description></rule>
+    <rule id="rule-cohort-inwit" name="Inwit Phalangites" hidden="false"><description>All infantry gain Stubborn. +1 Save when in cover (max 2+).</description></rule>
+    <rule id="rule-cohort-saturnyne" name="Saturnyne Hoplites" hidden="false"><description>Veletaris units become Troops (gain Line). +1 Ld army-wide.</description></rule>
+    <rule id="rule-cohort-kambrea" name="Kambrea Lifeguard" hidden="false"><description>+1 Mv for all tanks. Leman Russ units may re-roll one To Hit die.</description></rule>
+    <rule id="rule-cohort-agathon" name="Agathon Reconquistors" hidden="false"><description>All fast attack units gain Scout. +1 to Initiative rolls.</description></rule>
+    <rule id="rule-forge-mars" name="Mars (Loyalist)" hidden="false"><description>All Automata gain +1 Ld. Archmagos units may repair 2 HP instead of 1 with Machinator Array.</description></rule>
+    <rule id="rule-forge-ryza" name="Ryza" hidden="false"><description>All plasma weapons improve their W value by 1. Gets Hot triggers on 1-2 instead of just 1.</description></rule>
+    <rule id="rule-forge-graia" name="Graia" hidden="false"><description>All units gain Stubborn. +1 to Deny the Witch rolls.</description></rule>
+    <rule id="rule-forge-metalica" name="Metalica" hidden="false"><description>All units gain +0.5&quot; Mv. Units may Advance and still fire Heavy weapons at -1 to Hit.</description></rule>
+    <rule id="rule-forge-stygies" name="Stygies VIII" hidden="false"><description>Up to 3 units may Infiltrate. All units count as in cover during Round 1.</description></rule>
+    <rule id="rule-forge-xana" name="Xana II (Dark Mechanicum)" hidden="false"><description>All Stalker Constructs gain +1 HP. Noosphere Gestalt bonus kicks in at 2 units instead of 3.</description></rule>
+    <rule id="rule-forge-cyclo" name="Cyclothrathe (Dark Mechanicum)" hidden="false"><description>All units gain Rad-saturation (enemy weapons +1 W in melee vs this unit). Scrap Code may be used twice per game.</description></rule>
+    <rule id="rule-forge-kelbor" name="Kelbor-Hal&#x27;s Host (Dark Mechanicum)" hidden="false"><description>Unlimited Dark Pacts (no limit per game). However, Warp Backlash results affect D3 units instead of 1.</description></rule>
+    <rule id="rule-forge-zhao" name="Zhao-Arkhad (Loyalist or Traitor)" hidden="false"><description>All Battle-Automata gain +1 to Hit at long range (over half their weapon&#x27;s stated Range). Once per game, you may unearth a Lost Pattern: choose one Vehicle or Automata in your army — for the rest of the game, that unit&#x27;s primary ranged weapon improves its W value by 1.</description></rule>
   </sharedRules>
 </gameSystem>
