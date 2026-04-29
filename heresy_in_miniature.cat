@@ -2,30 +2,32 @@
 <catalogue id="him-master" name="Heresy in Miniature v3.0 — All Factions" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="him-system" gameSystemRevision="5" authorName="Heresy in Miniature" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
 
   <categoryEntries>
+    <!-- Legacy alignment markers (kept for rules/rule-text references) -->
     <categoryEntry id="cat-loyalist-sub" name="Loyalist Subfaction" hidden="true"/>
     <categoryEntry id="cat-traitor-sub" name="Traitor Subfaction" hidden="true"/>
     <categoryEntry id="cat-either-sub" name="Either Subfaction" hidden="true"/>
+    <!-- Faction / Legion categories — shown at top of roster -->
     <categoryEntry id="cat-subfaction" name="Subfaction" hidden="true">
       <constraints>
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="max-1-subfaction" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="cat-boon-l-cond" name="Loyalist Boon (Campaign Only)" hidden="true">
+    <categoryEntry id="cat-boon-l-cond" name="★ Boon — Loyalist (pick up to 6)" hidden="false">
       <constraints>
         <constraint field="selections" scope="roster" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="max-6-l-cond" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="cat-boon-l-camp" name="Loyalist Earned Boon (Campaign Only)" hidden="true">
+    <categoryEntry id="cat-boon-l-camp" name="★ Campaign Boon — Loyalist (pick up to 5)" hidden="false">
       <constraints>
         <constraint field="selections" scope="roster" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="max-5-l-camp" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="cat-boon-t-cond" name="Traitor Boon (Campaign Only)" hidden="true">
+    <categoryEntry id="cat-boon-t-cond" name="★ Boon — Traitor (pick up to 6)" hidden="false">
       <constraints>
         <constraint field="selections" scope="roster" value="6" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="max-6-t-cond" type="max"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="cat-boon-t-camp" name="Traitor Earned Boon (Campaign Only)" hidden="true">
+    <categoryEntry id="cat-boon-t-camp" name="★ Campaign Boon — Traitor (pick up to 5)" hidden="false">
       <constraints>
         <constraint field="selections" scope="roster" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="max-5-t-camp" type="max"/>
       </constraints>
@@ -33,6 +35,37 @@
   </categoryEntries>
 
   <entryLinks>
+    <!-- Faction selection entry links -->
+    <entryLink id="el-fac-la-loy" name="Legiones Astartes — Loyalist" targetId="se-fac-la-loyalist" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-fac-la-tra" name="Legiones Astartes — Traitor" targetId="se-fac-la-traitor" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-fac-sa" name="Solar Auxilia" targetId="se-fac-sa" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-fac-tm" name="Mechanicum Taghmata" targetId="se-fac-tm" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-fac-mil" name="Militia &amp; Cults" targetId="se-fac-mil" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-fac-talons" name="Talons of the Emperor" targetId="se-fac-talons" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-fac-knights" name="Questoris Household" targetId="se-fac-knights" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-fac-daemons" name="Daemonic Host" targetId="se-fac-daemons" type="selectionEntry" hidden="false"/>
+    <!-- Legion / Subfaction entry links -->
+    <entryLink id="el-sub-da" name="I — Dark Angels" targetId="se-sub-da" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-ec" name="III — Emperor&#x27;s Children" targetId="se-sub-ec" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-iw" name="IV — Iron Warriors" targetId="se-sub-iw" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-ws" name="V — White Scars" targetId="se-sub-ws" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-sw" name="VI — Space Wolves" targetId="se-sub-sw" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-if" name="VII — Imperial Fists" targetId="se-sub-if" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-nl" name="VIII — Night Lords" targetId="se-sub-nl" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-ba" name="IX — Blood Angels" targetId="se-sub-ba" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-ih" name="X — Iron Hands" targetId="se-sub-ih" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-we" name="XII — World Eaters" targetId="se-sub-we" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-um" name="XIII — Ultramarines" targetId="se-sub-um" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-dg" name="XIV — Death Guard" targetId="se-sub-dg" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-ts" name="XV — Thousand Sons" targetId="se-sub-ts" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-soh" name="XVI — Sons of Horus" targetId="se-sub-soh" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-wb" name="XVII — Word Bearers" targetId="se-sub-wb" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-sal" name="XVIII — Salamanders" targetId="se-sub-sal" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-rg" name="XIX — Raven Guard" targetId="se-sub-rg" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-al" name="XX — Alpha Legion" targetId="se-sub-al" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-sa" name="Solar Auxilia" targetId="se-sub-sa" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-tm" name="Mechanicum Taghmata" targetId="se-sub-tm" type="selectionEntry" hidden="false"/>
+    <entryLink id="el-sub-mil" name="Militia" targetId="se-sub-mil" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-cmd" name="Legion Command" targetId="se-la-cmd" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-praetor" name="Legion Praetor" targetId="se-la-praetor" type="selectionEntry" hidden="false"/>
     <entryLink id="el-la-chaplain" name="Legion Chaplain" targetId="se-la-chaplain" type="selectionEntry" hidden="false"/>
@@ -259,7 +292,6 @@
     <entryLink id="el-sub-wb" name="XVII — Word Bearers" targetId="se-sub-wb" type="selectionEntry" hidden="false"/>
     <entryLink id="el-sub-sal" name="XVIII — Salamanders" targetId="se-sub-sal" type="selectionEntry" hidden="false"/>
     <entryLink id="el-sub-rg" name="XIX — Raven Guard" targetId="se-sub-rg" type="selectionEntry" hidden="false"/>
-    <entryLink id="el-sub-al" name="XX — Alpha Legion" targetId="se-sub-al" type="selectionEntry" hidden="false"/>
     <entryLink id="el-sub-sa" name="Solar Auxilia" targetId="se-sub-sa" type="selectionEntry" hidden="false"/>
     <entryLink id="el-sub-tm" name="Mechanicum Taghmata" targetId="se-sub-tm" type="selectionEntry" hidden="false"/>
     <entryLink id="el-sub-mil" name="Militia" targetId="se-sub-mil" type="selectionEntry" hidden="false"/>
@@ -5731,7 +5763,7 @@
       </infoLinks></infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-da" name="I — Dark Angels" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-da" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-da-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-da-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-da" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-da-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-da-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-da-trait" name="Legion Trait">
@@ -5752,7 +5784,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-ec" name="III — Emperor&#x27;s Children" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-ec" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-ec-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-ec-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-ec" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-ec-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-ec-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-ec-trait" name="Legion Trait">
@@ -5773,7 +5805,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-iw" name="IV — Iron Warriors" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-iw" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-iw-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-iw-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-iw" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-iw-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-iw-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-iw-trait" name="Legion Trait">
@@ -5794,7 +5826,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-ws" name="V — White Scars" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-ws" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-ws-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-ws-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-ws" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-ws-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-ws-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-ws-trait" name="Legion Trait">
@@ -5815,7 +5847,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-sw" name="VI — Space Wolves" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-sw" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-sw-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-sw-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-sw" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-sw-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-sw-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-sw-trait" name="Legion Trait">
@@ -5836,7 +5868,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-if" name="VII — Imperial Fists" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-if" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-if-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-if-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-if" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-if-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-if-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-if-trait" name="Legion Trait">
@@ -5857,7 +5889,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-nl" name="VIII — Night Lords" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-nl" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-nl-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-nl-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-nl" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-nl-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-nl-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-nl-trait" name="Legion Trait">
@@ -5878,7 +5910,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-ba" name="IX — Blood Angels" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-ba" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-ba-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-ba-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-ba" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-ba-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-ba-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-ba-trait" name="Legion Trait">
@@ -5899,7 +5931,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-ih" name="X — Iron Hands" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-ih" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-ih-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-ih-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-ih" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-ih-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-ih-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-ih-trait" name="Legion Trait">
@@ -5920,7 +5952,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-we" name="XII — World Eaters" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-we" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-we-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-we-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-we" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-we-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-we-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-we-trait" name="Legion Trait">
@@ -5941,7 +5973,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-um" name="XIII — Ultramarines" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-um" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-um-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-um-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-um" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-um-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-um-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-um-trait" name="Legion Trait">
@@ -5962,7 +5994,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-dg" name="XIV — Death Guard" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-dg" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-dg-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-dg-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-dg" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-dg-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-dg-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-dg-trait" name="Legion Trait">
@@ -5983,7 +6015,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-ts" name="XV — Thousand Sons" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-ts" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-ts-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-ts-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-ts" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-ts-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-ts-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-ts-trait" name="Legion Trait">
@@ -6004,7 +6036,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-soh" name="XVI — Sons of Horus" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-soh" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-soh-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-soh-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-soh" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-soh-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-soh-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-soh-trait" name="Legion Trait">
@@ -6025,7 +6057,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-wb" name="XVII — Word Bearers" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-wb" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-wb-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-wb-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-wb" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-wb-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-wb-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-wb-trait" name="Legion Trait">
@@ -6046,7 +6078,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-sal" name="XVIII — Salamanders" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-sal" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-sal-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-sal-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-sal" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-sal-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-sal-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-sal-trait" name="Legion Trait">
@@ -6067,7 +6099,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-rg" name="XIX — Raven Guard" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-rg" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-rg-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-rg-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-rg" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-rg-loy" targetId="cat-loyalist-sub" primary="false"/><categoryLink id="cl-sub-rg-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-rg-trait" name="Legion Trait">
@@ -6088,7 +6120,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-al" name="XX — Alpha Legion" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-al" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-al-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-al-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-al" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-al-loy" targetId="cat-traitor-sub" primary="false"/><categoryLink id="cl-sub-al-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-al-trait" name="Legion Trait">
@@ -6109,7 +6141,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-sa" name="Solar Auxilia" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-sa" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-sa-loy" targetId="cat-either-sub" primary="false"/><categoryLink id="cl-sub-sa-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-sa" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-sa-loy" targetId="cat-either-sub" primary="false"/><categoryLink id="cl-sub-sa-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-sa-trait" name="Legion Trait">
@@ -6130,7 +6162,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-tm" name="Mechanicum Taghmata" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-tm" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-tm-loy" targetId="cat-either-sub" primary="false"/><categoryLink id="cl-sub-tm-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-tm" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-tm-loy" targetId="cat-either-sub" primary="false"/><categoryLink id="cl-sub-tm-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-tm-trait" name="Legion Trait">
@@ -6151,7 +6183,7 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-sub-mil" name="Militia" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-sub-mil" targetId="cat-hq" primary="false"/><categoryLink id="cl-sub-mil-loy" targetId="cat-either-sub" primary="false"/><categoryLink id="cl-sub-mil-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-sub-mil" targetId="cat-legion" primary="true"/><categoryLink id="cl-sub-mil-loy" targetId="cat-either-sub" primary="false"/><categoryLink id="cl-sub-mil-sf" targetId="cat-subfaction" primary="false"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups>
         <infoGroup id="ig-sub-mil-trait" name="Legion Trait">
@@ -6172,154 +6204,154 @@
       </infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-l-faith" name="Boon: Unshakeable Faith" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-l-faith-bcat" targetId="cat-boon-l-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-l-faith-bcat" targetId="cat-boon-l-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-l-faith" name="Loyalist Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-l-faith" name="Boon: Unshakeable Faith" targetId="note-boon-l-faith" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-l-shield" name="Boon: Shield of Terra" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-l-shield-bcat" targetId="cat-boon-l-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-l-shield-bcat" targetId="cat-boon-l-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-l-shield" name="Loyalist Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-l-shield" name="Boon: Shield of Terra" targetId="note-boon-l-shield" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-l-beacon" name="Boon: The Beacon" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-l-beacon-bcat" targetId="cat-boon-l-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-l-beacon-bcat" targetId="cat-boon-l-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-l-beacon" name="Loyalist Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-l-beacon" name="Boon: The Beacon" targetId="note-boon-l-beacon" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-l-aegis" name="Boon: Null Aegis" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-l-aegis-bcat" targetId="cat-boon-l-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-l-aegis-bcat" targetId="cat-boon-l-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-l-aegis" name="Loyalist Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-l-aegis" name="Boon: Null Aegis" targetId="note-boon-l-aegis" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-l-brothers" name="Boon: Brothers in Arms" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-l-brothers-bcat" targetId="cat-boon-l-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-l-brothers-bcat" targetId="cat-boon-l-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-l-brothers" name="Loyalist Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-l-brothers" name="Boon: Brothers in Arms" targetId="note-boon-l-brothers" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-l-oath" name="Boon: Oath of Moment" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-l-oath-bcat" targetId="cat-boon-l-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-l-oath-bcat" targetId="cat-boon-l-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-l-oath" name="Loyalist Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-l-oath" name="Boon: Oath of Moment" targetId="note-boon-l-oath" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-lc-defiant" name="Campaign Boon: Defiant Stand" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-lc-defiant-bcat" targetId="cat-boon-l-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-lc-defiant-bcat" targetId="cat-boon-l-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-lc-defiant" name="Loyalist Campaign Boons">
         <infoLinks><infoLink id="il-boon-lc-defiant" name="Campaign Boon: Defiant Stand" targetId="note-boon-lc-defiant" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-lc-reinforce" name="Campaign Boon: Reinforced Positions" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-lc-reinforce-bcat" targetId="cat-boon-l-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-lc-reinforce-bcat" targetId="cat-boon-l-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-lc-reinforce" name="Loyalist Campaign Boons">
         <infoLinks><infoLink id="il-boon-lc-reinforce" name="Campaign Boon: Reinforced Positions" targetId="note-boon-lc-reinforce" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-lc-ascendant" name="Campaign Boon: Astartes Ascendant" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-lc-ascendant-bcat" targetId="cat-boon-l-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-lc-ascendant-bcat" targetId="cat-boon-l-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-lc-ascendant" name="Loyalist Campaign Boons">
         <infoLinks><infoLink id="il-boon-lc-ascendant" name="Campaign Boon: Astartes Ascendant" targetId="note-boon-lc-ascendant" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-lc-protects" name="Campaign Boon: The Emperor Protects" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-lc-protects-bcat" targetId="cat-boon-l-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-lc-protects-bcat" targetId="cat-boon-l-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-lc-protects" name="Loyalist Campaign Boons">
         <infoLinks><infoLink id="il-boon-lc-protects" name="Campaign Boon: The Emperor Protects" targetId="note-boon-lc-protects" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-lc-veterans" name="Campaign Boon: Veterans of the Long War" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-lc-veterans-bcat" targetId="cat-boon-l-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-lc-veterans-bcat" targetId="cat-boon-l-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-lc-veterans" name="Loyalist Campaign Boons">
         <infoLinks><infoLink id="il-boon-lc-veterans" name="Campaign Boon: Veterans of the Long War" targetId="note-boon-lc-veterans" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-t-summon" name="Boon: Daemonic Summoning" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-t-summon-bcat" targetId="cat-boon-t-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-t-summon-bcat" targetId="cat-boon-t-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-t-summon" name="Traitor Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-t-summon" name="Boon: Daemonic Summoning" targetId="note-boon-t-summon" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-t-corruption" name="Boon: Corruption Spread" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-t-corruption-bcat" targetId="cat-boon-t-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-t-corruption-bcat" targetId="cat-boon-t-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-t-corruption" name="Traitor Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-t-corruption" name="Boon: Corruption Spread" targetId="note-boon-t-corruption" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-t-shadow" name="Boon: Night Haunter&#x27;s Shadow" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-t-shadow-bcat" targetId="cat-boon-t-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-t-shadow-bcat" targetId="cat-boon-t-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-t-shadow" name="Traitor Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-t-shadow" name="Boon: Night Haunter&#x27;s Shadow" targetId="note-boon-t-shadow" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-t-warpforged" name="Boon: Warp-Forged" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-t-warpforged-bcat" targetId="cat-boon-t-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-t-warpforged-bcat" targetId="cat-boon-t-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-t-warpforged" name="Traitor Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-t-warpforged" name="Boon: Warp-Forged" targetId="note-boon-t-warpforged" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-t-bitter" name="Boon: Bitter Resolve" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-t-bitter-bcat" targetId="cat-boon-t-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-t-bitter-bcat" targetId="cat-boon-t-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-t-bitter" name="Traitor Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-t-bitter" name="Boon: Bitter Resolve" targetId="note-boon-t-bitter" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-t-marked" name="Boon: Marked by Chaos" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-t-marked-bcat" targetId="cat-boon-t-cond" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-t-marked-bcat" targetId="cat-boon-t-cond" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-t-marked" name="Traitor Boons (Campaign Only)">
         <infoLinks><infoLink id="il-boon-t-marked" name="Boon: Marked by Chaos" targetId="note-boon-t-marked" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-tc-surge" name="Campaign Boon: Warp Surge" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-tc-surge-bcat" targetId="cat-boon-t-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-tc-surge-bcat" targetId="cat-boon-t-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-tc-surge" name="Traitor Campaign Boons">
         <infoLinks><infoLink id="il-boon-tc-surge" name="Campaign Boon: Warp Surge" targetId="note-boon-tc-surge" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-tc-apotheosis" name="Campaign Boon: Dark Apotheosis" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-tc-apotheosis-bcat" targetId="cat-boon-t-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-tc-apotheosis-bcat" targetId="cat-boon-t-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-tc-apotheosis" name="Traitor Campaign Boons">
         <infoLinks><infoLink id="il-boon-tc-apotheosis" name="Campaign Boon: Dark Apotheosis" targetId="note-boon-tc-apotheosis" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-tc-favour" name="Campaign Boon: Warmaster&#x27;s Favour" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-tc-favour-bcat" targetId="cat-boon-t-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-tc-favour-bcat" targetId="cat-boon-t-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-tc-favour" name="Traitor Campaign Boons">
         <infoLinks><infoLink id="il-boon-tc-favour" name="Campaign Boon: Warmaster&#x27;s Favour" targetId="note-boon-tc-favour" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-tc-tide" name="Campaign Boon: Corruption Tide" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-tc-tide-bcat" targetId="cat-boon-t-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-tc-tide-bcat" targetId="cat-boon-t-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-tc-tide" name="Traitor Campaign Boons">
         <infoLinks><infoLink id="il-boon-tc-tide" name="Campaign Boon: Corruption Tide" targetId="note-boon-tc-tide" type="rule"/></infoLinks>
       </infoGroup></infoGroups>
     </selectionEntry>
     <selectionEntry id="se-boon-tc-longwar" name="Campaign Boon: The Long War Begins" hidden="false" collective="false" type="upgrade">
-      <categoryLinks><categoryLink id="cl-boon-tc-longwar-bcat" targetId="cat-boon-t-camp" primary="false"/></categoryLinks>
+      <categoryLinks><categoryLink id="cl-boon-tc-longwar-bcat" targetId="cat-boon-t-camp" primary="true"/></categoryLinks>
       <costs><cost name="pts" typeId="pts" value="0"/></costs>
       <infoGroups><infoGroup id="ig-boon-tc-longwar" name="Traitor Campaign Boons">
         <infoLinks><infoLink id="il-boon-tc-longwar" name="Campaign Boon: The Long War Begins" targetId="note-boon-tc-longwar" type="rule"/></infoLinks>
@@ -7048,4 +7080,125 @@
     <rule id="note-boon-tc-tide" name="Campaign Boon: Corruption Tide" hidden="false"><description>Round 3 every game: 1 free Lesser Daemon Pack from board edge. Earned: win 3+ games with Summoning.</description></rule>
     <rule id="note-boon-tc-longwar" name="Campaign Boon: The Long War Begins" hidden="false"><description>All units +1 Ld. Earned: complete entire campaign book.</description></rule>
   </sharedRules>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       FACTION SELECTION ENTRIES
+       Pick exactly one Faction entry per roster. These live in the
+       cat-faction category so they always appear first in the UI.
+  ════════════════════════════════════════════════════════════════════ -->
+  <sharedSelectionEntries>
+    <selectionEntry id="se-fac-la-loyalist" name="Legiones Astartes — Loyalist" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-la-loy" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-la-loy-align" targetId="cat-loyalist-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-la-loy" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-la-loy-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-la-traitor" name="Legiones Astartes — Traitor" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-la-tra" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-la-tra-align" targetId="cat-traitor-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-la-tra" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-la-tra-1" name="Legiones Astartes special rules apply" targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-sa" name="Solar Auxilia" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-sa" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-sa-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-sa" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-sa-1" name="Discipline of the Tercio. +1 Reaction per 2 Troops (max +2)." targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-tm" name="Mechanicum Taghmata" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-tm" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-tm-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-tm" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-tm-1" name="Cortex Network. Automata require Controller." targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-mil" name="Militia &amp; Cults" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-mil" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-mil-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-mil" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-mil-1" name="Strength in Numbers. Expendable. Mortal (max Sv 4+)." targetId="rule-line" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-talons" name="Talons of the Emperor" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-talons" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-talons-align" targetId="cat-loyalist-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-talons" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-talons-1" name="Null Aegis when Custodes + Sisters within 3&quot;." targetId="rule-null-aegis" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-knights" name="Questoris Household" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-knights" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-knights-align" targetId="cat-either-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-knights" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-knights-1" name="Knight Household rules apply. Seneschal required as HQ." targetId="rule-commander" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry id="se-fac-daemons" name="Daemonic Host" hidden="false" collective="false" type="upgrade">
+      <categoryLinks>
+        <categoryLink id="cl-fac-daemons" targetId="cat-faction" primary="true"/>
+        <categoryLink id="cl-fac-daemons-align" targetId="cat-traitor-sub" primary="false"/>
+      </categoryLinks>
+      <costs><cost name="pts" typeId="pts" value="0"/></costs>
+      <infoGroups>
+        <infoGroup id="ig-fac-daemons" name="Faction Rules">
+          <infoLinks>
+            <infoLink id="il-fac-daemons-1" name="Daemon special rules apply. Instability at end of round." targetId="rule-daemon" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+  </sharedSelectionEntries>
+
 </catalogue>
